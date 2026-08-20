@@ -1,0 +1,578 @@
+tipo,precio,m2,precio_m2,zona,features
+Departamento,500000,44,11364,General San Martín,44 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,800000,64,12500,San Martín Centro,64 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,550000,40,13750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,700000,50,14000,Villa Ballester,50 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,600000,42,14286,General San Martín,42 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,2600000,226,11504,Villa Ballester,226 m² tot. 7 amb. 4 dorm. 3 baños 1 coch.
+Departamento,650000,45,14444,Villa Granaderos De San Martin,45 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,550000,44,12500,Villa Maipu,44 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,45,12222,Villa Ballester,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,450000,45,10000,Villa Ballester,45 m² tot. 2 amb. 1 baño
+Departamento,650000,50,13000,Villa Ballester,50 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,800000,72,11111,San Martín Centro,72 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,550000,38,14474,Villa Ballester,38 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,750000,60,12500,San Andrés,60 m² tot. 1 dorm. 1 baño
+Departamento,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,1300000,95,13684,Billinghurst,95 m² tot. 4 amb. 3 dorm. 1 baño
+Departamento,400000,30,13333,San Martín Centro,30 m² tot. 1 amb. 1 baño
+Departamento,760000,70,10857,Villa Lynch,70 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,500000,38,13158,General San Martín,38 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,380000,32,11875,General San Martín,32 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,890000,64,13906,Villa Ballester,64 m² tot. 3 amb. 1 baño
+Departamento,1500000,220,6818,General San Martín,220 m² tot. 5 amb. 5 dorm. 1 baño
+Departamento,350000,35,10000,General San Martín,35 m² tot. 1 amb. 1 baño
+Departamento,700000,50,14000,San Martín Centro,50 m² tot. 2 amb. 1 dorm. 1 baño 2 coch.
+Departamento,890000,64,13906,Villa Ballester,64 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,650000,60,10833,General San Martín,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,300000,26,11538,General San Martín,26 m² tot. 1 amb. 1 baño
+Departamento,900000,65,13846,Villa Maipu,65 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,450000,42,10714,Villa Libertad,42 m² tot. 1 amb. 1 baño
+Departamento,700000,60,11667,Villa Libertad,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,730000,54,13519,San Martín Centro,54 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,600000,46,13043,San Martín Centro,46 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,600000,60,10000,San Martín Centro,60 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,700000,121,5785,Villa Ballester,121 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,700000,48,14583,San Martín Centro,48 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,400000,27,14815,Villa Ballester,27 m² tot. 1 amb. 1 baño
+Departamento,850000,59,14407,Villa Ballester,59 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,550000,46,11957,Villa Ballester,46 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,580000,50,11600,General San Martín,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,47,13830,San Andrés,47 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,600000,41,14634,San Martín Centro,41 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,700000,70,10000,Villa Ballester,70 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,45,14444,San Andrés,45 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,560000,60,9333,General San Martín,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,450000,86,5233,Villa Libertad,86 m² tot. 1 amb. 1 baño 1 coch.
+Departamento,700000,49,14286,General San Martín,49 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,45,12222,Villa Ballester,45 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,580000,48,12083,San Martín Centro,48 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,500000,40,12500,José León Suárez,40 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,550000,55,10000,San Martín Centro,55 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,45,14444,General San Martín,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,34,14706,Villa Ballester,34 m² tot. 1 amb. 1 baño
+Departamento,650000,55,11818,Villa Ballester,55 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,49,11224,Villa Ballester,49 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,800000,61,13115,Villa Ballester,61 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,550000,38,14474,San Andrés,38 m² tot. 1 amb. 1 baño 1 coch.
+Departamento,750000,60,12500,José León Suárez,60 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,530000,45,11778,General San Martín,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,900000,62,14516,Villa Ballester,62 m² tot. 2 amb. 1 baño 1 coch.
+Departamento,570000,40,14250,Billinghurst,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,700000,61,11475,General San Martín,61 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,500000,35,14286,Villa Ballester,35 m² tot. 1 dorm. 1 baño
+Departamento,400000,30,13333,San Martín Centro,30 m² tot. 1 amb.
+Departamento,550000,42,13095,San Martín Centro,42 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,400000,35,11429,José León Suárez,35 m² tot. 1 amb. 1 baño
+Departamento,690000,65,10615,San Martín Centro,65 m² tot. 1 amb.
+Departamento,650000,45,14444,General San Martín,45 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,900000,75,12000,Villa Ballester,75 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,900000,170,5294,José León Suárez,170 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,600000,67,8955,Villa Ballester,67 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,380000,30,12667,José León Suárez,30 m² tot. 1 amb. 1 baño
+Departamento,500000,40,12500,José León Suárez,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,680000,60,11333,San Martín Centro,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,480000,40,12000,San Martín Centro,40 m² tot. 1 amb. 1 dorm. 1 baño
+Departamento,870000,60,14500,Villa Ballester,60 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,700000,54,12963,José León Suárez,54 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,630000,44,14318,General San Martín,44 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,600000,50,12000,Villa Ballester,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,700000,51,13725,Villa Ballester,51 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,46,14130,General San Martín,46 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,510000,48,10625,José León Suárez,48 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,50,13000,Villa Ballester,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,1400000,180,7778,San Martín Centro,180 m² tot. 5 amb. 3 dorm. 2 baños
+Departamento,1100000,113,9735,General San Martín,113 m² tot. 2 amb. 1 dorm. 2 baños 1 coch.
+Departamento,550000,50,11000,San Martín Centro,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,38,13158,Villa Ballester,38 m² tot. 1 amb. 1 baño
+Departamento,650000,51,12745,Villa Ballester,51 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,630000,58,10862,San Martín Centro,58 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,690000,70,9857,Barrio Parque General San Martin,70 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,550000,48,11458,San Martín Centro,48 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,350000,32,10938,José León Suárez,32 m² tot. 1 amb. 1 dorm. 1 baño
+Departamento,480000,36,13333,José León Suárez,36 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,45,12222,San Martín Centro,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,1300000,220,5909,General San Martín,220 m² tot. 4 amb. 3 dorm. 1 baño
+Departamento,450000,35,12857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,400000,40,10000,José León Suárez,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,35,14286,General San Martín,35 m² tot. 1 amb. 1 baño 1 coch.
+Departamento,900000,66,13636,Villa Ballester,66 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,700000,52,13462,Villa Lynch,52 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,1250000,232,5388,Villa Maipu,232 m² tot. 4 amb. 3 dorm. 2 baños
+Departamento,495000,45,11000,Villa Maipu,45 m² tot. 1 amb. 1 baño
+Departamento,800000,65,12308,General San Martín,65 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,570000,40,14250,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,950000,73,13014,Villa Ballester,73 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,1050000,75,14000,General San Martín,75 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,630000,42,15000,San Andrés,42 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,850000,65,13077,José León Suárez,65 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,620000,44,14091,Villa Ballester,44 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,50,13000,Villa Ballester,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,600000,47,12766,San Martín Centro,47 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,40,12500,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,680000,51,13333,Villa Ballester,51 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,400000,45,8889,Villa Bonich,45 m² tot. 1 amb. 1 baño
+Departamento,700000,65,10769,San Martín Centro,65 m² tot. 1 amb.
+Departamento,460000,35,13143,José León Suárez,35 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,600000,55,10909,Barrio Parque General San Martin,55 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,700000,48,14583,Villa Ballester,48 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,400000,27,14815,Villa Ballester,27 m² tot. 1 amb. 1 baño
+Departamento,500000,40,12500,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,530000,36,14722,Villa Ballester,36 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,600000,45,13333,Villa Ballester,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,1200000,196,6122,Villa Ballester,196 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,300000,25,12000,San Andrés,25 m² tot. 1 amb. 1 baño
+Departamento,570000,58,9828,Villa Ballester,58 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,470000,40,11750,José León Suárez,40 m² tot. 1 baño
+Departamento,690000,56,12321,San Martín Centro,56 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,2500000,262,9542,Villa Ballester,262 m² tot. 5 amb. 2 baños
+Departamento,600000,46,13043,General San Martín,46 m² tot. 1 amb. 1 baño
+Departamento,500000,55,9091,Villa Ballester,55 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,900000,66,13636,Villa Ballester,66 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,785000,68,11544,San Martín Centro,68 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,900000,88,10227,Villa Monteagudo,88 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,350000,30,11667,Billinghurst,30 m² tot. 1 amb. 1 baño
+Departamento,600000,45,13333,Villa Lynch,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,640000,58,11034,San Martín Centro,58 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,650000,65,10000,General San Martín,65 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,400000,47,8511,San Martín Centro,47 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,38,14474,General San Martín,38 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,35,14286,General San Martín,35 m² tot. 1 amb. 1 baño
+Departamento,850000,65,13077,Villa Lynch,65 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,500000,60,8333,San Martín Centro,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,780000,53,14717,General San Martín,53 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,750000,52,14423,General San Martín,52 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,50,11000,Villa Ballester,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,650000,51,12745,San Martín Centro,51 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,150000,50,3000,Barrio Parque General San Martin,50 m² tot. 1 amb. 1 dorm. 1 baño
+Departamento,650000,60,10833,José León Suárez,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,650000,54,12037,San Andrés,54 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,680000,50,13600,General San Martín,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,35,14286,José León Suárez,35 m² tot. 1 amb. 1 baño
+Departamento,470000,40,11750,José León Suárez,40 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,650000,44,14773,Villa Ballester,44 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,500000,45,11111,Villa Lynch,45 m² tot. 1 amb. 1 baño
+Departamento,750000,55,13636,San Martín Centro,55 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,350000,25,14000,José León Suárez,25 m² tot. 1 amb. 1 baño
+Departamento,400000,27,14815,Villa Ballester,27 m² tot. 1 amb. 1 baño
+Departamento,620000,44,14091,Villa Ballester,44 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,400000,30,13333,San Martín Centro,30 m² tot. 1 amb.
+Departamento,2500000,262,9542,Villa Ballester,262 m² tot. 5 amb. 2 baños
+Departamento,780000,53,14717,General San Martín,53 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,1300000,220,5909,General San Martín,220 m² tot. 4 amb. 3 dorm. 1 baño
+Departamento,570000,58,9828,Villa Ballester,58 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,1400000,180,7778,San Martín Centro,180 m² tot. 5 amb. 3 dorm. 2 baños
+Departamento,650000,46,14130,General San Martín,46 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,450000,86,5233,Villa Libertad,86 m² tot. 1 amb. 1 baño 1 coch.
+Departamento,950000,73,13014,Villa Ballester,73 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,430000,33,13030,Villa Ballester,33 m² tot. 1 amb. 1 baño
+Departamento,380000,30,12667,José León Suárez,30 m² tot. 1 amb. 1 baño
+Departamento,600000,56,10714,Villa Ballester,56 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,1100000,113,9735,General San Martín,113 m² tot. 2 amb. 1 dorm. 2 baños 1 coch.
+Departamento,470000,40,11750,José León Suárez,40 m² tot. 1 baño
+Departamento,700000,61,11475,General San Martín,61 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Departamento,630000,45,14000,General San Martín,45 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,580000,100,5800,Villa Ballester,100 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,38,14474,General San Martín,38 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,550000,40,13750,General San Martín,40 m² tot. 1 amb. 1 dorm. 1 baño
+Departamento,750000,75,10000,Villa Maipu,75 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,1400000,100,14000,San Andrés,100 m² tot. 3 amb. 2 dorm. 3 baños 1 coch.
+Departamento,420000,39,10769,Villa Ballester,39 m² tot. 1 amb. 1 baño
+Departamento,850000,85,10000,San Martín Centro,85 m² tot. 4 amb. 3 dorm. 2 baños
+Departamento,1000000,130,7692,San Andrés,130 m² tot. 4 amb. 3 dorm. 2 baños
+Departamento,800000,60,13333,José León Suárez,60 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,775000,52,14904,General San Martín,52 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,570000,64,8906,General San Martín,64 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,590000,45,13111,General San Martín,45 m² tot. 2 amb. 1 dorm.
+Departamento,400000,35,11429,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,450000,33,13636,Villa Ballester,33 m² tot. 1 amb. 1 baño
+Departamento,590000,50,11800,San Martín Centro,50 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,400000,32,12500,General San Martín,32 m² tot. 1 amb. 1 dorm.
+Departamento,750000,70,10714,General San Martín,70 m² tot. 3 amb. 2 dorm. 1 baño
+Departamento,500000,40,12500,José León Suárez,40 m² tot. 2 amb. 1 dorm.
+Departamento,550000,40,13750,San Martín Centro,40 m² tot. 2 amb. 1 dorm. 1 baño
+Departamento,750000,86,8721,San Martín Centro,86 m² tot. 3 amb. 2 dorm. 2 baños
+Departamento,800000,60,13333,Villa Ballester,60 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+Departamento,480000,40,12000,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,900000,200,4500,José León Suárez,200 m² tot. 4 amb. 3 dorm. 3 baños 3 coch.
+Casa,1200000,170,7059,San Martín Centro,170 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,900000,132,6818,Villa Ballester,132 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,150,8667,Villa Ballester,150 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,1650000,400,4125,Villa Ballester,400 m² tot. 4 amb. 3 dorm. 2 baños 4 coch.
+Casa,1200000,90,13333,Villa Ballester,90 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,2000000,250,8000,Villa Ballester,250 m² tot. 4 amb. 3 dorm. 2 baños 1 coch.
+Casa,850000,290,2931,Villa Libertad,290 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1000000,249,4016,José León Suárez,249 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,720000,75,9600,Villa Libertad,75 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,750000,72,10417,Villa Ballester,72 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1600000,433,3695,Villa Ballester,433 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1500000,222,6757,Villa Maipu,222 m² tot. 6 amb. 5 dorm. 2 baños
+Casa,1400000,98,14286,Villa Ballester,98 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,100,14000,San Andrés,100 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,1100000,110,10000,Villa Ballester,110 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,950000,150,6333,Villa Lynch,150 m² tot. 4 amb. 3 dorm. 1 baño
+Casa,1500000,122,12295,Villa Ballester,122 m² tot. 5 amb. 4 dorm. 1 baño
+Casa,1900000,164,11585,Villa Ballester,164 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1250000,270,4630,General San Martín,270 m² tot. 4 amb. 3 dorm. 1 baño 3 coch.
+Casa,800000,70,11429,José León Suárez,70 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,900000,75,12000,General San Martín,75 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,750000,90,8333,José León Suárez,90 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,3000000,298,10067,San Martín Centro,298 m² tot. 5 amb. 4 dorm. 3 baños 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,800000,88,9091,José León Suárez,88 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1200000,100,12000,San Andrés,100 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,1300000,120,10833,Villa Ballester,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,1400000,125,11200,Villa Ballester,125 m² tot. 4 amb. 3 dorm. 3 baños 1 coch.
+Casa,1300000,157,8280,José León Suárez,157 m² tot. 4 amb. 3 dorm. 2 baños
+Casa,1500000,160,9375,Villa Ballester,160 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,3700000,596,6208,San Andrés,596 m² tot. 11 amb. 7 dorm. 4 baños 4 coch.
+Casa,800000,170,4706,José León Suárez,170 m² tot. 4 amb. 3 dorm. 1 baño 1 coch.
+Casa,900000,170,5294,José León Suárez,170 m² tot. 6 amb. 5 dorm. 1 baño 1 coch.
+Casa,890000,150,5933,Loma Hermosa,150 m² tot. 4 amb. 3 dorm. 1 baño 2 coch.
+Casa,900000,81,11111,Villa Maipu,81 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+Casa,900000,155,5806,Villa Ballester,155 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+Casa,950000,234,4060,Villa Ballester,234 m² tot. 3 amb. 2 dorm. 1 baño 2 coch.
+Casa,800000,448,1786,Villa Ballester,448 m² tot. 2 amb. 1 dorm. 1 baño
+Casa,800000,80,10000,Loma Hermosa,80 m² tot. 3 amb. 2 dorm. 1 baño
+Casa,1300000,120,10833,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,890000,120,7417,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,900000,200,4500,Billinghurst,200 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,600000,40,15000,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,45,10000,General San Martín,45 m² tot. 1 amb. 1 dorm. 1 baño
+PH,800000,80,10000,Villa Ballester,80 m² tot. 2 amb. 1 dorm. 1 baño
+PH,530000,40,13250,San Andrés,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,800000,60,13333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,800000,68,11765,Villa Ballester,68 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,280000,22,12727,José León Suárez,22 m² tot. 1 amb. 1 baño
+PH,800000,86,9302,General San Martín,86 m² tot. 3 amb. 2 dorm. 2 baños
+PH,650000,53,12264,Villa Ballester,53 m² tot. 2 amb. 1 dorm. 1 baño
+PH,690000,50,13800,San Andrés,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,490000,47,10426,Billinghurst,47 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,130,6923,Villa Ballester,130 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,126,5952,San Martín Centro,126 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,100,10000,Villa Maipu,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,70,9286,General San Martín,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,800000,60,13333,Villa Lynch,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,800000,83,9639,San Andrés,83 m² tot. 3 amb. 2 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,55,9091,Villa Ballester,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,650000,65,10000,Villa Ballester,65 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Ballester,40 m² tot. 3 amb. 2 dorm. 1 baño
+PH,410000,35,11714,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,550000,55,10000,Villa Ballester,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,40,12500,San Andrés,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,650000,45,14444,Villa Ballester,45 m² tot. 3 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,43,10465,Villa Ballester,43 m² tot. 2 amb. 1 dorm. 1 baño
+PH,800000,85,9412,San Andrés,85 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,800000,56,14286,Villa Ballester,56 m² tot. 3 amb. 2 dorm. 1 baño
+PH,400000,42,9524,Villa Ballester,42 m² tot. 3 amb. 2 dorm. 1 baño
+PH,800000,88,9091,José León Suárez,88 m² tot. 3 amb. 2 dorm. 1 baño
+PH,550000,65,8462,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,950000,80,11875,General San Martín,80 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+PH,1200000,170,7059,Villa Lynch,170 m² tot. 3 amb. 3 dorm. 1 baño 1 coch.
+PH,490000,40,12250,San Martín Centro,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,480000,70,6857,José León Suárez,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,55,8182,General San Martín,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,35,14286,San Martín Centro,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,280000,30,9333,General San Martín,30 m² tot. 1 amb. 1 baño
+PH,1500000,125,12000,San Martín Centro,125 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,400000,40,10000,Villa Ballester,40 m² tot. 1 amb. 1 baño
+PH,900000,120,7500,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,400000,30,13333,José León Suárez,30 m² tot. 2 amb. 1 dorm. 1 baño
+PH,750000,65,11538,Villa Ballester,65 m² tot. 3 amb. 2 dorm. 1 baño
+PH,950000,140,6786,José León Suárez,140 m² tot. 3 amb. 2 dorm. 2 baños 2 coch.
+PH,750000,90,8333,Villa Lynch,90 m² tot. 3 amb. 2 dorm. 1 baño
+PH,550000,50,11000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,600000,45,13333,San Andrés,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,40,11250,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,600000,45,13333,San Martín Centro,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,130,6923,Villa Ballester,130 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,450000,35,12857,Billinghurst,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,1200000,170,7059,Villa Lynch,170 m² tot. 3 amb. 3 dorm. 1 baño 1 coch.
+PH,1100000,83,13253,Villa Ballester,83 m² tot. 3 amb. 2 dorm. 1 baño
+PH,740000,70,10571,Villa Ballester,70 m² tot. 2 amb. 1 dorm. 1 baño 1 coch.
+PH,800000,85,9412,San Andrés,85 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,280000,30,9333,General San Martín,30 m² tot. 1 amb. 1 baño
+PH,600000,40,15000,San Andrés,40 m² tot. 2 amb. 1 baño
+PH,450000,40,11250,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,90,10000,Villa Lynch,90 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1500000,125,12000,San Martín Centro,125 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,950000,80,11875,General San Martín,80 m² tot. 3 amb. 2 dorm. 2 baños 1 coch.
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,800000,83,9639,San Andrés,83 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,43,10465,Villa Ballester,43 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,50,9000,Villa Ballester,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,65,13846,San Martín Centro,65 m² tot. 3 amb. 2 dorm. 1 baño
+PH,460000,70,6571,Villa Libertad,70 m² tot. 2 amb. 1 dorm. 1 baño
+PH,850000,90,9444,José León Suárez,90 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,500000,85,5882,Billinghurst,85 m² tot. 2 amb. 1 dorm. 1 baño
+PH,750000,65,11538,Villa Ballester,65 m² tot. 3 amb. 2 dorm. 1 baño
+PH,900000,120,7500,General San Martín,120 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,90,8333,Villa Lynch,90 m² tot. 3 amb. 2 dorm. 1 baño
+PH,800000,88,9091,José León Suárez,88 m² tot. 3 amb. 2 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,470000,45,10444,Billinghurst,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,70,6429,Billinghurst,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,120,8333,Villa Lynch,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Lynch,40 m² tot. 1 amb. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,65,7692,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,100,9000,Villa Ballester,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,580000,50,11600,Villa Maipu,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,550000,39,14103,Villa Ballester,39 m² tot. 2 amb. 1 dorm. 1 baño
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,510000,37,13784,Villa Ballester,37 m² tot. 1 amb.
+PH,800000,60,13333,San Andrés,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,620000,60,10333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,850000,106,8019,Villa Ballester,106 m² tot. 3 amb. 2 dorm. 1 baño
+PH,600000,90,6667,Villa Maipu,90 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,520000,39,13333,José León Suárez,39 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,50,13000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,470000,45,10444,Billinghurst,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,70,6429,Billinghurst,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,120,8333,Villa Lynch,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Lynch,40 m² tot. 1 amb. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,65,7692,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,100,9000,Villa Ballester,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,580000,50,11600,Villa Maipu,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,550000,39,14103,Villa Ballester,39 m² tot. 2 amb. 1 dorm. 1 baño
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,510000,37,13784,Villa Ballester,37 m² tot. 1 amb.
+PH,800000,60,13333,San Andrés,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,620000,60,10333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,850000,106,8019,Villa Ballester,106 m² tot. 3 amb. 2 dorm. 1 baño
+PH,600000,90,6667,Villa Maipu,90 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,520000,39,13333,José León Suárez,39 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,50,13000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,470000,45,10444,Billinghurst,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,70,6429,Billinghurst,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,120,8333,Villa Lynch,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Lynch,40 m² tot. 1 amb. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,65,7692,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,100,9000,Villa Ballester,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,580000,50,11600,Villa Maipu,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,550000,39,14103,Villa Ballester,39 m² tot. 2 amb. 1 dorm. 1 baño
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,510000,37,13784,Villa Ballester,37 m² tot. 1 amb.
+PH,800000,60,13333,San Andrés,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,620000,60,10333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,850000,106,8019,Villa Ballester,106 m² tot. 3 amb. 2 dorm. 1 baño
+PH,600000,90,6667,Villa Maipu,90 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,520000,39,13333,José León Suárez,39 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,50,13000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,470000,45,10444,Billinghurst,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,70,6429,Billinghurst,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,120,8333,Villa Lynch,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Lynch,40 m² tot. 1 amb. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,65,7692,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,100,9000,Villa Ballester,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,580000,50,11600,Villa Maipu,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,550000,39,14103,Villa Ballester,39 m² tot. 2 amb. 1 dorm. 1 baño
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,510000,37,13784,Villa Ballester,37 m² tot. 1 amb.
+PH,800000,60,13333,San Andrés,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,620000,60,10333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,850000,106,8019,Villa Ballester,106 m² tot. 3 amb. 2 dorm. 1 baño
+PH,600000,90,6667,Villa Maipu,90 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,520000,39,13333,José León Suárez,39 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,50,13000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,470000,45,10444,Billinghurst,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,70,6429,Billinghurst,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,120,8333,Villa Lynch,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Lynch,40 m² tot. 1 amb. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,65,7692,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,100,9000,Villa Ballester,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,580000,50,11600,Villa Maipu,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,550000,39,14103,Villa Ballester,39 m² tot. 2 amb. 1 dorm. 1 baño
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,510000,37,13784,Villa Ballester,37 m² tot. 1 amb.
+PH,800000,60,13333,San Andrés,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,620000,60,10333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,850000,106,8019,Villa Ballester,106 m² tot. 3 amb. 2 dorm. 1 baño
+PH,600000,90,6667,Villa Maipu,90 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,520000,39,13333,José León Suárez,39 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,50,13000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,430000,40,10750,Villa Ballester,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,470000,45,10444,Billinghurst,45 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,70,6429,Billinghurst,70 m² tot. 3 amb. 2 dorm. 1 baño
+PH,700000,60,11667,Barrio Parque General San Martin,60 m² tot. 3 amb. 2 dorm. 1 baño 1 coch.
+PH,750000,60,12500,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,1000000,120,8333,Villa Lynch,120 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,Villa Lynch,40 m² tot. 1 amb. 1 baño
+PH,600000,55,10909,José León Suárez,55 m² tot. 2 amb. 1 dorm. 1 baño
+PH,715000,50,14300,Villa Lynch,50 m² tot. 3 amb. 2 dorm. 1 baño
+PH,450000,40,11250,General San Martín,40 m² tot. 2 amb. 1 dorm. 1 baño
+PH,500000,65,7692,Villa Ballester,65 m² tot. 2 amb. 1 dorm. 1 baño
+PH,900000,100,9000,Villa Ballester,100 m² tot. 3 amb. 2 dorm. 1 baño
+PH,580000,50,11600,Villa Maipu,50 m² tot. 2 amb. 1 dorm. 1 baño
+PH,550000,39,14103,Villa Ballester,39 m² tot. 2 amb. 1 dorm. 1 baño
+PH,520000,35,14857,Villa Ballester,35 m² tot. 2 amb. 1 dorm. 1 baño
+PH,510000,37,13784,Villa Ballester,37 m² tot. 1 amb.
+PH,800000,60,13333,San Andrés,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,620000,60,10333,Villa Ballester,60 m² tot. 3 amb. 2 dorm. 1 baño
+PH,850000,106,8019,Villa Ballester,106 m² tot. 3 amb. 2 dorm. 1 baño
+PH,600000,90,6667,Villa Maipu,90 m² tot. 2 amb. 1 dorm. 1 baño
+PH,450000,30,15000,Villa Lynch,30 m² tot. 1 amb. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,520000,39,13333,José León Suárez,39 m² tot. 1 amb. 1 dorm. 1 baño
+PH,900000,95,9474,Villa Lynch,95 m² tot. 3 amb. 2 dorm. 1 baño
+PH,650000,50,13000,Villa Lynch,50 m² tot. 2 amb. 1 dorm. 1 baño

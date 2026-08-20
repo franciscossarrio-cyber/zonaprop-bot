@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_38ebbeb7da294baaa690178147e116d5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;
+                background: white; padding: 10px 14px; border-radius: 6px;
+                box-shadow: 0 1px 4px rgba(0.0.0.0.3); font-family: sans-serif; font-size: 13px;">
+      <b>Precio del m² (alquiler)</b><br>
+      <span style="color:#00c800">●</span> $6.266 (más barato)<br>
+      <span style="color:#ffc800">●</span> $10.355<br>
+      <span style="color:#ff0000">●</span> $14.444 (más caro)<br>
+      <i>Relleno = precio · Borde = tipo (panel de capas arriba a la derecha)</i><br>
+      <i>Tamaño del círculo = cantidad de avisos</i>
+    </div>
+    
+    
+            <div class="folium-map" id="map_38ebbeb7da294baaa690178147e116d5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_38ebbeb7da294baaa690178147e116d5 = L.map(
+                "map_38ebbeb7da294baaa690178147e116d5",
+                {
+                    center: [-34.5657, -58.5495],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_146a985c861b55dbf86bd60fceb50f1b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_146a985c861b55dbf86bd60fceb50f1b.addTo(map_38ebbeb7da294baaa690178147e116d5);
+        
+    
+            var feature_group_42ab7425e8f24781978392dbd4f4f74e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7934c4c846dfd46a604c944bb747489c = L.circleMarker(
+                [-34.5495145, -58.5305126],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_238b7a9006768799f59ccc5b9b242f7d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9417220385bcb5025ef0e1fd65dd3ac8 = $(`<div id="html_9417220385bcb5025ef0e1fd65dd3ac8" style="width: 100.0%; height: 100.0%;"><b>Villa Granaderos De San Martin — Departamento</b><br>Mediana: $14.444/m²<br>Promedio: $14.444/m²<br>Rango: $14.444 - $14.444<br>Avisos: 1</div>`)[0];
+                popup_238b7a9006768799f59ccc5b9b242f7d.setContent(html_9417220385bcb5025ef0e1fd65dd3ac8);
+            
+        
+
+        circle_marker_7934c4c846dfd46a604c944bb747489c.bindPopup(popup_238b7a9006768799f59ccc5b9b242f7d)
+        ;
+
+        
+    
+    
+            circle_marker_7934c4c846dfd46a604c944bb747489c.bindTooltip(
+                `<div>
+                     Villa Granaderos De San Martin (Departamento): $14.444/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20c4311359699833a3611ee0a67bd811 = L.circleMarker(
+                [-34.56347, -58.5407268],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff1e00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.3, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_def1cb643beddfcfda26e9cc2c211191 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1731a125ce9e3362f8ea7118ad327337 = $(`<div id="html_1731a125ce9e3362f8ea7118ad327337" style="width: 100.0%; height: 100.0%;"><b>San Andrés — Departamento</b><br>Mediana: $13.830/m²<br>Promedio: $12.886/m²<br>Rango: $7.692 - $15.000<br>Avisos: 9</div>`)[0];
+                popup_def1cb643beddfcfda26e9cc2c211191.setContent(html_1731a125ce9e3362f8ea7118ad327337);
+            
+        
+
+        circle_marker_20c4311359699833a3611ee0a67bd811.bindPopup(popup_def1cb643beddfcfda26e9cc2c211191)
+        ;
+
+        
+    
+    
+            circle_marker_20c4311359699833a3611ee0a67bd811.bindTooltip(
+                `<div>
+                     San Andrés (Departamento): $13.830/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_248ccce87fd766aed8d2a1dc667326c5 = L.circleMarker(
+                [-34.5752034, -58.5747487],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff2500", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.1, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_6918ce300aa38a1c5a20ef566131de0d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3d159f466d5a1f5df299dabdd67db607 = $(`<div id="html_3d159f466d5a1f5df299dabdd67db607" style="width: 100.0%; height: 100.0%;"><b>Billinghurst — Departamento</b><br>Mediana: $13.684/m²<br>Promedio: $13.200/m²<br>Rango: $11.667 - $14.250<br>Avisos: 3</div>`)[0];
+                popup_6918ce300aa38a1c5a20ef566131de0d.setContent(html_3d159f466d5a1f5df299dabdd67db607);
+            
+        
+
+        circle_marker_248ccce87fd766aed8d2a1dc667326c5.bindPopup(popup_6918ce300aa38a1c5a20ef566131de0d)
+        ;
+
+        
+    
+    
+            circle_marker_248ccce87fd766aed8d2a1dc667326c5.bindTooltip(
+                `<div>
+                     Billinghurst (Departamento): $13.684/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb1a2a06eab93706104fc168d5805083 = L.circleMarker(
+                [-34.5914199, -58.5247675],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4200", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_dfc88ad4eb23d37e265387d34a9a5f02 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9641403d33f427edbdaa920068cc970a = $(`<div id="html_9641403d33f427edbdaa920068cc970a" style="width: 100.0%; height: 100.0%;"><b>Villa Lynch — Departamento</b><br>Mediana: $13.077/m²<br>Promedio: $12.368/m²<br>Rango: $10.857 - $13.462<br>Avisos: 5</div>`)[0];
+                popup_dfc88ad4eb23d37e265387d34a9a5f02.setContent(html_9641403d33f427edbdaa920068cc970a);
+            
+        
+
+        circle_marker_bb1a2a06eab93706104fc168d5805083.bindPopup(popup_dfc88ad4eb23d37e265387d34a9a5f02)
+        ;
+
+        
+    
+    
+            circle_marker_bb1a2a06eab93706104fc168d5805083.bindTooltip(
+                `<div>
+                     Villa Lynch (Departamento): $13.077/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ca4dba14b1fcc2572c4c68ccfff8090 = L.circleMarker(
+                [-36.7941956, -59.8792232],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4400", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_0ab97a48ada42cf33245c13d0d3174df = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_89cf636e36c180e94851bc5de3ceefc5 = $(`<div id="html_89cf636e36c180e94851bc5de3ceefc5" style="width: 100.0%; height: 100.0%;"><b>General San Martín — Departamento</b><br>Mediana: $13.043/m²<br>Promedio: $12.251/m²<br>Rango: $5.909 - $14.904<br>Avisos: 43</div>`)[0];
+                popup_0ab97a48ada42cf33245c13d0d3174df.setContent(html_89cf636e36c180e94851bc5de3ceefc5);
+            
+        
+
+        circle_marker_3ca4dba14b1fcc2572c4c68ccfff8090.bindPopup(popup_0ab97a48ada42cf33245c13d0d3174df)
+        ;
+
+        
+    
+    
+            circle_marker_3ca4dba14b1fcc2572c4c68ccfff8090.bindTooltip(
+                `<div>
+                     General San Martín (Departamento): $13.043/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_914b0d0fc4e4914cfd46e95708eb9575 = L.circleMarker(
+                [-34.5509077, -58.5559691],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4500", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_0a2d39bed1eda1e0349061441be914a1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_59a39ed68344c70cb1fc2f442fce235e = $(`<div id="html_59a39ed68344c70cb1fc2f442fce235e" style="width: 100.0%; height: 100.0%;"><b>Villa Ballester — Departamento</b><br>Mediana: $13.014/m²<br>Promedio: $12.439/m²<br>Rango: $5.785 - $14.857<br>Avisos: 63</div>`)[0];
+                popup_0a2d39bed1eda1e0349061441be914a1.setContent(html_59a39ed68344c70cb1fc2f442fce235e);
+            
+        
+
+        circle_marker_914b0d0fc4e4914cfd46e95708eb9575.bindPopup(popup_0a2d39bed1eda1e0349061441be914a1)
+        ;
+
+        
+    
+    
+            circle_marker_914b0d0fc4e4914cfd46e95708eb9575.bindTooltip(
+                `<div>
+                     Villa Ballester (Departamento): $13.014/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac46c83732d75fb971fb87146413a605 = L.circleMarker(
+                [-34.534488, -58.5762177],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff5f00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.4, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_4756e5c2b37da1eeea6a522eeee18506 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6790a7bf41112441e8641b68955098bf = $(`<div id="html_6790a7bf41112441e8641b68955098bf" style="width: 100.0%; height: 100.0%;"><b>José León Suárez — Departamento</b><br>Mediana: $12.500/m²<br>Promedio: $11.993/m²<br>Rango: $5.294 - $14.286<br>Avisos: 22</div>`)[0];
+                popup_4756e5c2b37da1eeea6a522eeee18506.setContent(html_6790a7bf41112441e8641b68955098bf);
+            
+        
+
+        circle_marker_ac46c83732d75fb971fb87146413a605.bindPopup(popup_4756e5c2b37da1eeea6a522eeee18506)
+        ;
+
+        
+    
+    
+            circle_marker_ac46c83732d75fb971fb87146413a605.bindTooltip(
+                `<div>
+                     José León Suárez (Departamento): $12.500/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4c3dbef19788a54cd230e0227acf417 = L.circleMarker(
+                [-34.5821217, -58.5540323],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7c00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.2, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_4a2e94ba1bd18fc34bd9e4e37b0578d7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_93a0b97dde4e94503b9c5f02b974c50f = $(`<div id="html_93a0b97dde4e94503b9c5f02b974c50f" style="width: 100.0%; height: 100.0%;"><b>San Martín Centro — Departamento</b><br>Mediana: $11.900/m²<br>Promedio: $11.654/m²<br>Rango: $7.778 - $14.634<br>Avisos: 36</div>`)[0];
+                popup_4a2e94ba1bd18fc34bd9e4e37b0578d7.setContent(html_93a0b97dde4e94503b9c5f02b974c50f);
+            
+        
+
+        circle_marker_d4c3dbef19788a54cd230e0227acf417.bindPopup(popup_4a2e94ba1bd18fc34bd9e4e37b0578d7)
+        ;
+
+        
+    
+    
+            circle_marker_d4c3dbef19788a54cd230e0227acf417.bindTooltip(
+                `<div>
+                     San Martín Centro (Departamento): $11.900/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ef1fc7fa1f80b236171377d82e4df0b = L.circleMarker(
+                [-34.5683054, -58.5222212],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffa800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_44f4aac44bd99fbfa529550223ba19ab = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dfd7feb0b380a843224c64a0d7d19715 = $(`<div id="html_dfd7feb0b380a843224c64a0d7d19715" style="width: 100.0%; height: 100.0%;"><b>Villa Maipu — Departamento</b><br>Mediana: $11.000/m²<br>Promedio: $10.547/m²<br>Rango: $5.388 - $13.846<br>Avisos: 5</div>`)[0];
+                popup_44f4aac44bd99fbfa529550223ba19ab.setContent(html_dfd7feb0b380a843224c64a0d7d19715);
+            
+        
+
+        circle_marker_5ef1fc7fa1f80b236171377d82e4df0b.bindPopup(popup_44f4aac44bd99fbfa529550223ba19ab)
+        ;
+
+        
+    
+    
+            circle_marker_5ef1fc7fa1f80b236171377d82e4df0b.bindTooltip(
+                `<div>
+                     Villa Maipu (Departamento): $11.000/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4175e96b91a532f303778d48bcf4816 = L.circleMarker(
+                [-34.5902821, -58.5392874],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f7c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_917913d2e0981285fb650eb93761152c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_47b25036050f3cc040134a5f88ceccea = $(`<div id="html_47b25036050f3cc040134a5f88ceccea" style="width: 100.0%; height: 100.0%;"><b>Villa Monteagudo — Departamento</b><br>Mediana: $10.227/m²<br>Promedio: $10.227/m²<br>Rango: $10.227 - $10.227<br>Avisos: 1</div>`)[0];
+                popup_917913d2e0981285fb650eb93761152c.setContent(html_47b25036050f3cc040134a5f88ceccea);
+            
+        
+
+        circle_marker_f4175e96b91a532f303778d48bcf4816.bindPopup(popup_917913d2e0981285fb650eb93761152c)
+        ;
+
+        
+    
+    
+            circle_marker_f4175e96b91a532f303778d48bcf4816.bindTooltip(
+                `<div>
+                     Villa Monteagudo (Departamento): $10.227/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d9e66bae16e6d2ebc4ce76844bd1c44 = L.circleMarker(
+                [-34.5643033, -58.5793987],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dfc800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.1, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_f6281cba4514d24c41e0a9f4ee8c6fa2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7937c17e588f0ac372f511294739d5b2 = $(`<div id="html_7937c17e588f0ac372f511294739d5b2" style="width: 100.0%; height: 100.0%;"><b>Barrio Parque General San Martin — Departamento</b><br>Mediana: $9.857/m²<br>Promedio: $7.922/m²<br>Rango: $3.000 - $10.909<br>Avisos: 3</div>`)[0];
+                popup_f6281cba4514d24c41e0a9f4ee8c6fa2.setContent(html_7937c17e588f0ac372f511294739d5b2);
+            
+        
+
+        circle_marker_3d9e66bae16e6d2ebc4ce76844bd1c44.bindPopup(popup_f6281cba4514d24c41e0a9f4ee8c6fa2)
+        ;
+
+        
+    
+    
+            circle_marker_3d9e66bae16e6d2ebc4ce76844bd1c44.bindTooltip(
+                `<div>
+                     Barrio Parque General San Martin (Departamento): $9.857/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9291d1811a80a30008f179088a99e2c = L.circleMarker(
+                [-34.5712921, -58.5625402],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a3c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_3af5ce5cc21b67edbe79dd8cb7484548 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_93a225f768c2e487f96023a75645ff9d = $(`<div id="html_93a225f768c2e487f96023a75645ff9d" style="width: 100.0%; height: 100.0%;"><b>Villa Bonich — Departamento</b><br>Mediana: $8.889/m²<br>Promedio: $8.889/m²<br>Rango: $8.889 - $8.889<br>Avisos: 1</div>`)[0];
+                popup_3af5ce5cc21b67edbe79dd8cb7484548.setContent(html_93a225f768c2e487f96023a75645ff9d);
+            
+        
+
+        circle_marker_d9291d1811a80a30008f179088a99e2c.bindPopup(popup_3af5ce5cc21b67edbe79dd8cb7484548)
+        ;
+
+        
+    
+    
+            circle_marker_d9291d1811a80a30008f179088a99e2c.bindTooltip(
+                `<div>
+                     Villa Bonich (Departamento): $8.889/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3cbe39acffb6b7490f19cc548fdce05d = L.circleMarker(
+                [-34.5838719, -58.5600959],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6ac800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_42ab7425e8f24781978392dbd4f4f74e);
+        
+    
+        var popup_b3817e9965f4affed4cedf71e28a9820 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dc0f32bad17d823bed608ff4b0a4d2e8 = $(`<div id="html_dc0f32bad17d823bed608ff4b0a4d2e8" style="width: 100.0%; height: 100.0%;"><b>Villa Libertad — Departamento</b><br>Mediana: $7.974/m²<br>Promedio: $8.212/m²<br>Rango: $5.233 - $11.667<br>Avisos: 4</div>`)[0];
+                popup_b3817e9965f4affed4cedf71e28a9820.setContent(html_dc0f32bad17d823bed608ff4b0a4d2e8);
+            
+        
+
+        circle_marker_3cbe39acffb6b7490f19cc548fdce05d.bindPopup(popup_b3817e9965f4affed4cedf71e28a9820)
+        ;
+
+        
+    
+    
+            circle_marker_3cbe39acffb6b7490f19cc548fdce05d.bindTooltip(
+                `<div>
+                     Villa Libertad (Departamento): $7.974/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_42ab7425e8f24781978392dbd4f4f74e.addTo(map_38ebbeb7da294baaa690178147e116d5);
+        
+    
+            var feature_group_8b473e8b2ba3858fc4651c8c89c8682e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_957e91d624d50d14f8c234002dd23bdf = L.circleMarker(
+                [-34.56257, -58.5398268],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7700", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.9, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_59a897af238cddc7842820679b0972d8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5d39cdb302cb37c1a1a6e6038176e51f = $(`<div id="html_5d39cdb302cb37c1a1a6e6038176e51f" style="width: 100.0%; height: 100.0%;"><b>San Andrés — Casa</b><br>Mediana: $12.000/m²<br>Promedio: $9.392/m²<br>Rango: $6.208 - $14.000<br>Avisos: 17</div>`)[0];
+                popup_59a897af238cddc7842820679b0972d8.setContent(html_5d39cdb302cb37c1a1a6e6038176e51f);
+            
+        
+
+        circle_marker_957e91d624d50d14f8c234002dd23bdf.bindPopup(popup_59a897af238cddc7842820679b0972d8)
+        ;
+
+        
+    
+    
+            circle_marker_957e91d624d50d14f8c234002dd23bdf.bindTooltip(
+                `<div>
+                     San Andrés (Casa): $12.000/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_993a44f4d9a30745e3ccdb1a12b15ccb = L.circleMarker(
+                [-34.5674054, -58.521321199999996],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffa300", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.3, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_1c3ce83672f23181f952792197c12c69 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1583830a50e85ae57803c7bbca9f0bb3 = $(`<div id="html_1583830a50e85ae57803c7bbca9f0bb3" style="width: 100.0%; height: 100.0%;"><b>Villa Maipu — Casa</b><br>Mediana: $11.111/m²<br>Promedio: $10.627/m²<br>Rango: $6.757 - $11.111<br>Avisos: 9</div>`)[0];
+                popup_1c3ce83672f23181f952792197c12c69.setContent(html_1583830a50e85ae57803c7bbca9f0bb3);
+            
+        
+
+        circle_marker_993a44f4d9a30745e3ccdb1a12b15ccb.bindPopup(popup_1c3ce83672f23181f952792197c12c69)
+        ;
+
+        
+    
+    
+            circle_marker_993a44f4d9a30745e3ccdb1a12b15ccb.bindTooltip(
+                `<div>
+                     Villa Maipu (Casa): $11.111/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e80ed3bb34b31f15e88ed9ebc2ff666 = L.circleMarker(
+                [-36.7932956, -59.8783232],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffb000", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_7f3c2cc00016466e014ce1434da6af1b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f5423e14179b7bdaf8812bfda902e6a9 = $(`<div id="html_f5423e14179b7bdaf8812bfda902e6a9" style="width: 100.0%; height: 100.0%;"><b>General San Martín — Casa</b><br>Mediana: $10.833/m²<br>Promedio: $10.329/m²<br>Rango: $4.630 - $12.000<br>Avisos: 10</div>`)[0];
+                popup_7f3c2cc00016466e014ce1434da6af1b.setContent(html_f5423e14179b7bdaf8812bfda902e6a9);
+            
+        
+
+        circle_marker_7e80ed3bb34b31f15e88ed9ebc2ff666.bindPopup(popup_7f3c2cc00016466e014ce1434da6af1b)
+        ;
+
+        
+    
+    
+            circle_marker_7e80ed3bb34b31f15e88ed9ebc2ff666.bindTooltip(
+                `<div>
+                     General San Martín (Casa): $10.833/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6de5706965d10a93cd35bf94a5458d5 = L.circleMarker(
+                [-34.5500077, -58.5550691],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c1c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_ed626cc0f1216e1934525de5901cdade = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf86bb1bda471e5cbe2c781cac54d81f = $(`<div id="html_bf86bb1bda471e5cbe2c781cac54d81f" style="width: 100.0%; height: 100.0%;"><b>Villa Ballester — Casa</b><br>Mediana: $9.375/m²<br>Promedio: $7.588/m²<br>Rango: $1.786 - $14.286<br>Avisos: 59</div>`)[0];
+                popup_ed626cc0f1216e1934525de5901cdade.setContent(html_bf86bb1bda471e5cbe2c781cac54d81f);
+            
+        
+
+        circle_marker_f6de5706965d10a93cd35bf94a5458d5.bindPopup(popup_ed626cc0f1216e1934525de5901cdade)
+        ;
+
+        
+    
+    
+            circle_marker_f6de5706965d10a93cd35bf94a5458d5.bindTooltip(
+                `<div>
+                     Villa Ballester (Casa): $9.375/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d302b1d7063bb622bced323e6b97534f = L.circleMarker(
+                [-34.5812217, -58.5531323],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8fc800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.4, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_a98e63d0c8138dbfebde56cf4e3f577f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b23f11be2d6d23384c48640d18ae93bb = $(`<div id="html_b23f11be2d6d23384c48640d18ae93bb" style="width: 100.0%; height: 100.0%;"><b>San Martín Centro — Casa</b><br>Mediana: $8.563/m²<br>Promedio: $8.563/m²<br>Rango: $7.059 - $10.067<br>Avisos: 2</div>`)[0];
+                popup_a98e63d0c8138dbfebde56cf4e3f577f.setContent(html_b23f11be2d6d23384c48640d18ae93bb);
+            
+        
+
+        circle_marker_d302b1d7063bb622bced323e6b97534f.bindPopup(popup_a98e63d0c8138dbfebde56cf4e3f577f)
+        ;
+
+        
+    
+    
+            circle_marker_d302b1d7063bb622bced323e6b97534f.bindTooltip(
+                `<div>
+                     San Martín Centro (Casa): $8.563/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f74b86687ce859108a63c71648d7a31 = L.circleMarker(
+                [-34.5650362, -58.589837599999996],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6ac800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.2, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_6341b604d6c7bb71788b1a7e924d4672 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a3d899a03e881405229f1170ae941aa4 = $(`<div id="html_a3d899a03e881405229f1170ae941aa4" style="width: 100.0%; height: 100.0%;"><b>Loma Hermosa — Casa</b><br>Mediana: $7.966/m²<br>Promedio: $7.966/m²<br>Rango: $5.933 - $10.000<br>Avisos: 16</div>`)[0];
+                popup_6341b604d6c7bb71788b1a7e924d4672.setContent(html_a3d899a03e881405229f1170ae941aa4);
+            
+        
+
+        circle_marker_9f74b86687ce859108a63c71648d7a31.bindPopup(popup_6341b604d6c7bb71788b1a7e924d4672)
+        ;
+
+        
+    
+    
+            circle_marker_9f74b86687ce859108a63c71648d7a31.bindTooltip(
+                `<div>
+                     Loma Hermosa (Casa): $7.966/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_707457985de9604418087ce80f72c9bb = L.circleMarker(
+                [-34.533588, -58.5753177],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#20c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.2, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_740ffa17b590acaf9586d9d9da88a6dc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_743afc939fb97902eeaa7f5a4f7672ad = $(`<div id="html_743afc939fb97902eeaa7f5a4f7672ad" style="width: 100.0%; height: 100.0%;"><b>José León Suárez — Casa</b><br>Mediana: $6.787/m²<br>Promedio: $6.868/m²<br>Rango: $4.016 - $11.429<br>Avisos: 36</div>`)[0];
+                popup_740ffa17b590acaf9586d9d9da88a6dc.setContent(html_743afc939fb97902eeaa7f5a4f7672ad);
+            
+        
+
+        circle_marker_707457985de9604418087ce80f72c9bb.bindPopup(popup_740ffa17b590acaf9586d9d9da88a6dc)
+        ;
+
+        
+    
+    
+            circle_marker_707457985de9604418087ce80f72c9bb.bindTooltip(
+                `<div>
+                     José León Suárez (Casa): $6.787/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b49e1ca520f8f9e8e31eafe2b6ad491 = L.circleMarker(
+                [-34.5905199, -58.5238675],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#04c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_6d112ca8b409013c7d044caf7d67ae30 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_df3f4ad3e45577c07a9cf9f423556805 = $(`<div id="html_df3f4ad3e45577c07a9cf9f423556805" style="width: 100.0%; height: 100.0%;"><b>Villa Lynch — Casa</b><br>Mediana: $6.333/m²<br>Promedio: $6.333/m²<br>Rango: $6.333 - $6.333<br>Avisos: 1</div>`)[0];
+                popup_6d112ca8b409013c7d044caf7d67ae30.setContent(html_df3f4ad3e45577c07a9cf9f423556805);
+            
+        
+
+        circle_marker_8b49e1ca520f8f9e8e31eafe2b6ad491.bindPopup(popup_6d112ca8b409013c7d044caf7d67ae30)
+        ;
+
+        
+    
+    
+            circle_marker_8b49e1ca520f8f9e8e31eafe2b6ad491.bindTooltip(
+                `<div>
+                     Villa Lynch (Casa): $6.333/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70351c3f957975c41ce1d29ef59a2146 = L.circleMarker(
+                [-34.5829719, -58.5591959],
+                {"bubblingMouseEvents": true, "color": "#2ca02c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.4, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8b473e8b2ba3858fc4651c8c89c8682e);
+        
+    
+        var popup_33836bbba6fcadcfac29d392b14ca94a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_69381032f486e21930955317c81dc76e = $(`<div id="html_69381032f486e21930955317c81dc76e" style="width: 100.0%; height: 100.0%;"><b>Villa Libertad — Casa</b><br>Mediana: $6.266/m²<br>Promedio: $6.266/m²<br>Rango: $2.931 - $9.600<br>Avisos: 2</div>`)[0];
+                popup_33836bbba6fcadcfac29d392b14ca94a.setContent(html_69381032f486e21930955317c81dc76e);
+            
+        
+
+        circle_marker_70351c3f957975c41ce1d29ef59a2146.bindPopup(popup_33836bbba6fcadcfac29d392b14ca94a)
+        ;
+
+        
+    
+    
+            circle_marker_70351c3f957975c41ce1d29ef59a2146.bindTooltip(
+                `<div>
+                     Villa Libertad (Casa): $6.266/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_8b473e8b2ba3858fc4651c8c89c8682e.addTo(map_38ebbeb7da294baaa690178147e116d5);
+        
+    
+            var feature_group_44bfe2a318f05ab998f224db99bd4b54 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_c4d3434cb868d6ff0ccad8ad6ad10c1b = L.circleMarker(
+                [-34.564370000000004, -58.5398268],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff3600", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_bcdbb07eedf064dd4d30b00f7f0fa920 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ab03c9f553e02bfd038b89bd233d2bf = $(`<div id="html_0ab03c9f553e02bfd038b89bd233d2bf" style="width: 100.0%; height: 100.0%;"><b>San Andrés — PH</b><br>Mediana: $13.333/m²<br>Promedio: $12.399/m²<br>Rango: $9.412 - $15.000<br>Avisos: 15</div>`)[0];
+                popup_bcdbb07eedf064dd4d30b00f7f0fa920.setContent(html_0ab03c9f553e02bfd038b89bd233d2bf);
+            
+        
+
+        circle_marker_c4d3434cb868d6ff0ccad8ad6ad10c1b.bindPopup(popup_bcdbb07eedf064dd4d30b00f7f0fa920)
+        ;
+
+        
+    
+    
+            circle_marker_c4d3434cb868d6ff0ccad8ad6ad10c1b.bindTooltip(
+                `<div>
+                     San Andrés (PH): $13.333/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c3d5581eff5974617ca0188d33c55d1 = L.circleMarker(
+                [-34.5830217, -58.5531323],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.899999999999999, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_57ebc6f4c480fb6c9c359465fda66cc8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ca18d2d136645dfd1c63285b6dd5f65d = $(`<div id="html_ca18d2d136645dfd1c63285b6dd5f65d" style="width: 100.0%; height: 100.0%;"><b>San Martín Centro — PH</b><br>Mediana: $12.250/m²<br>Promedio: $11.952/m²<br>Rango: $5.952 - $14.286<br>Avisos: 7</div>`)[0];
+                popup_57ebc6f4c480fb6c9c359465fda66cc8.setContent(html_ca18d2d136645dfd1c63285b6dd5f65d);
+            
+        
+
+        circle_marker_8c3d5581eff5974617ca0188d33c55d1.bindPopup(popup_57ebc6f4c480fb6c9c359465fda66cc8)
+        ;
+
+        
+    
+    
+            circle_marker_8c3d5581eff5974617ca0188d33c55d1.bindTooltip(
+                `<div>
+                     San Martín Centro (PH): $12.250/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_af5d9fd3ae01043de8f33b4ed98aa689 = L.circleMarker(
+                [-34.5652033, -58.5784987],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8700", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.899999999999999, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_93e53b791987b1d4417dff8aa501fea8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_29e5867f674dd4b3784d6e92dd6aba05 = $(`<div id="html_29e5867f674dd4b3784d6e92dd6aba05" style="width: 100.0%; height: 100.0%;"><b>Barrio Parque General San Martin — PH</b><br>Mediana: $11.667/m²<br>Promedio: $11.667/m²<br>Rango: $11.667 - $11.667<br>Avisos: 7</div>`)[0];
+                popup_93e53b791987b1d4417dff8aa501fea8.setContent(html_29e5867f674dd4b3784d6e92dd6aba05);
+            
+        
+
+        circle_marker_af5d9fd3ae01043de8f33b4ed98aa689.bindPopup(popup_93e53b791987b1d4417dff8aa501fea8)
+        ;
+
+        
+    
+    
+            circle_marker_af5d9fd3ae01043de8f33b4ed98aa689.bindTooltip(
+                `<div>
+                     Barrio Parque General San Martin (PH): $11.667/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e339391b0458808a02cf52c87f364b9 = L.circleMarker(
+                [-34.5923199, -58.5238675],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff9c00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_913d4b504a562c76a833ea11949c9c45 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7575a86f016719db9ef66a8d7453e451 = $(`<div id="html_7575a86f016719db9ef66a8d7453e451" style="width: 100.0%; height: 100.0%;"><b>Villa Lynch — PH</b><br>Mediana: $11.250/m²<br>Promedio: $11.361/m²<br>Rango: $7.059 - $15.000<br>Avisos: 51</div>`)[0];
+                popup_913d4b504a562c76a833ea11949c9c45.setContent(html_7575a86f016719db9ef66a8d7453e451);
+            
+        
+
+        circle_marker_1e339391b0458808a02cf52c87f364b9.bindPopup(popup_913d4b504a562c76a833ea11949c9c45)
+        ;
+
+        
+    
+    
+            circle_marker_1e339391b0458808a02cf52c87f364b9.bindTooltip(
+                `<div>
+                     Villa Lynch (PH): $11.250/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b96726a3de004d1ece5f9a7992dbb3c7 = L.circleMarker(
+                [-34.535388000000005, -58.5753177],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffac00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_78b79aa91d84a586634ecc569445f5c5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_453705763b6ca6abcedde980a0daa1b0 = $(`<div id="html_453705763b6ca6abcedde980a0daa1b0" style="width: 100.0%; height: 100.0%;"><b>José León Suárez — PH</b><br>Mediana: $10.909/m²<br>Promedio: $11.184/m²<br>Rango: $6.786 - $13.333<br>Avisos: 20</div>`)[0];
+                popup_78b79aa91d84a586634ecc569445f5c5.setContent(html_453705763b6ca6abcedde980a0daa1b0);
+            
+        
+
+        circle_marker_b96726a3de004d1ece5f9a7992dbb3c7.bindPopup(popup_78b79aa91d84a586634ecc569445f5c5)
+        ;
+
+        
+    
+    
+            circle_marker_b96726a3de004d1ece5f9a7992dbb3c7.bindTooltip(
+                `<div>
+                     José León Suárez (PH): $10.909/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0dc63f65bd2e81e4c4d01712c19b5a68 = L.circleMarker(
+                [-34.551807700000005, -58.5550691],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffb400", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_f9dfaf7e325b2b833a8413ef34b8c362 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5a73820b3701d7752beae5fecaf8b052 = $(`<div id="html_5a73820b3701d7752beae5fecaf8b052" style="width: 100.0%; height: 100.0%;"><b>Villa Ballester — PH</b><br>Mediana: $10.750/m²<br>Promedio: $11.125/m²<br>Rango: $6.923 - $14.857<br>Avisos: 81</div>`)[0];
+                popup_f9dfaf7e325b2b833a8413ef34b8c362.setContent(html_5a73820b3701d7752beae5fecaf8b052);
+            
+        
+
+        circle_marker_0dc63f65bd2e81e4c4d01712c19b5a68.bindPopup(popup_f9dfaf7e325b2b833a8413ef34b8c362)
+        ;
+
+        
+    
+    
+            circle_marker_0dc63f65bd2e81e4c4d01712c19b5a68.bindTooltip(
+                `<div>
+                     Villa Ballester (PH): $10.750/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86d530e731fa6ea65808d51d78e2fc23 = L.circleMarker(
+                [-36.7950956, -59.8783232],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_e34faccf5177714f53e4615f3eebad9e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0241d838ea2230b4044317d03befc040 = $(`<div id="html_0241d838ea2230b4044317d03befc040" style="width: 100.0%; height: 100.0%;"><b>General San Martín — PH</b><br>Mediana: $10.625/m²<br>Promedio: $10.228/m²<br>Rango: $7.417 - $15.000<br>Avisos: 18</div>`)[0];
+                popup_e34faccf5177714f53e4615f3eebad9e.setContent(html_0241d838ea2230b4044317d03befc040);
+            
+        
+
+        circle_marker_86d530e731fa6ea65808d51d78e2fc23.bindPopup(popup_e34faccf5177714f53e4615f3eebad9e)
+        ;
+
+        
+    
+    
+            circle_marker_86d530e731fa6ea65808d51d78e2fc23.bindTooltip(
+                `<div>
+                     General San Martín (PH): $10.625/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d032e98d4c4249a3aa3aafdeac307c67 = L.circleMarker(
+                [-34.5692054, -58.521321199999996],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e8c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.1, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_3632f65489d01e879f27458fde9387c9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c2850cf29b2d9d6398b36714db9ce0fe = $(`<div id="html_c2850cf29b2d9d6398b36714db9ce0fe" style="width: 100.0%; height: 100.0%;"><b>Villa Maipu — PH</b><br>Mediana: $10.000/m²<br>Promedio: $9.200/m²<br>Rango: $6.667 - $11.600<br>Avisos: 13</div>`)[0];
+                popup_3632f65489d01e879f27458fde9387c9.setContent(html_c2850cf29b2d9d6398b36714db9ce0fe);
+            
+        
+
+        circle_marker_d032e98d4c4249a3aa3aafdeac307c67.bindPopup(popup_3632f65489d01e879f27458fde9387c9)
+        ;
+
+        
+    
+    
+            circle_marker_d032e98d4c4249a3aa3aafdeac307c67.bindTooltip(
+                `<div>
+                     Villa Maipu (PH): $10.000/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3c028d83efc1b3dbbb7fae8dee48d0e = L.circleMarker(
+                [-34.5761034, -58.5738487],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#86c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.2, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_4d5f2db69a78ab8c6b92d8c38f32093d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2ded00b97c87ecdc5977c22532ba1381 = $(`<div id="html_2ded00b97c87ecdc5977c22532ba1381" style="width: 100.0%; height: 100.0%;"><b>Billinghurst — PH</b><br>Mediana: $8.428/m²<br>Promedio: $8.431/m²<br>Rango: $4.500 - $12.857<br>Avisos: 16</div>`)[0];
+                popup_4d5f2db69a78ab8c6b92d8c38f32093d.setContent(html_2ded00b97c87ecdc5977c22532ba1381);
+            
+        
+
+        circle_marker_e3c028d83efc1b3dbbb7fae8dee48d0e.bindPopup(popup_4d5f2db69a78ab8c6b92d8c38f32093d)
+        ;
+
+        
+    
+    
+            circle_marker_e3c028d83efc1b3dbbb7fae8dee48d0e.bindTooltip(
+                `<div>
+                     Billinghurst (PH): $8.428/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_559dd08eb6d48e5c36008efc699051b5 = L.circleMarker(
+                [-34.5847719, -58.5591959],
+                {"bubblingMouseEvents": true, "color": "#9467bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#13c800", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 2}
+            ).addTo(feature_group_44bfe2a318f05ab998f224db99bd4b54);
+        
+    
+        var popup_692259c90c4c063d1c63178093b9080c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6a70ede463a5628ab4f4d941ec81d337 = $(`<div id="html_6a70ede463a5628ab4f4d941ec81d337" style="width: 100.0%; height: 100.0%;"><b>Villa Libertad — PH</b><br>Mediana: $6.571/m²<br>Promedio: $6.571/m²<br>Rango: $6.571 - $6.571<br>Avisos: 1</div>`)[0];
+                popup_692259c90c4c063d1c63178093b9080c.setContent(html_6a70ede463a5628ab4f4d941ec81d337);
+            
+        
+
+        circle_marker_559dd08eb6d48e5c36008efc699051b5.bindPopup(popup_692259c90c4c063d1c63178093b9080c)
+        ;
+
+        
+    
+    
+            circle_marker_559dd08eb6d48e5c36008efc699051b5.bindTooltip(
+                `<div>
+                     Villa Libertad (PH): $6.571/m²
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_44bfe2a318f05ab998f224db99bd4b54.addTo(map_38ebbeb7da294baaa690178147e116d5);
+        
+    
+            var layer_control_104cbd9f9a1d44cd71d3485dd1cb88a0_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_146a985c861b55dbf86bd60fceb50f1b,
+                },
+                overlays :  {
+                    "Departamento" : feature_group_42ab7425e8f24781978392dbd4f4f74e,
+                    "Casa" : feature_group_8b473e8b2ba3858fc4651c8c89c8682e,
+                    "PH" : feature_group_44bfe2a318f05ab998f224db99bd4b54,
+                },
+            };
+            let layer_control_104cbd9f9a1d44cd71d3485dd1cb88a0 = L.control.layers(
+                layer_control_104cbd9f9a1d44cd71d3485dd1cb88a0_layers.base_layers,
+                layer_control_104cbd9f9a1d44cd71d3485dd1cb88a0_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_38ebbeb7da294baaa690178147e116d5);
+
+        
+</script>
+</html>

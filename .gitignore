@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Estado / cookies de sesión (no son secretos de repo, pero son ruido local)
+vistos.json
+vistos_argenprop.json
+argenprop_cookies.json
+
+# Dumps de debug (se regeneran con --dump)
+dump_*.html
+
+# Scripts locales con tokens de Telegram en texto plano — NO subir
+run_zonaprop_bot.bat
+run_argenprop_bot.bat
+
+# Config local de Claude Code
+.claude/
