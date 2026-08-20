@@ -1,0 +1,42 @@
+name: Mapeo San Martín
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   # todos los días 07:00 UTC (04:00 ART)
+  workflow_dispatch:        # botón para correrlo a mano
+
+permissions:
+  contents: write            # necesario para commitear los CSV/HTML actualizados
+
+concurrency:
+  group: sanmartin-mapeo
+  cancel-in-progress: false
+
+jobs:
+  scrape-y-mapa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Scrapear avisos de San Martín
+        run: python sanmartin_scrape_geo.py
+
+      - name: Agregar punto al histórico por barrio
+        run: python sanmartin_historico.py
+
+      - name: Regenerar mapa
+        run: python sanmartin_mapa_geo.py
+
+      - name: Commitear datos y mapa actualizados
+        run: |
+          git config user.name "sanmartin-mapeo-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add san_martin_avisos_geo.csv san_martin_historico.csv san_martin_mapa_geo.html
+          git diff --staged --quiet || git commit -m "mapeo: actualización $(date -u +%F\ %H:%M)"
+          git push

@@ -23,6 +23,7 @@ from pathlib import Path
 
 CSV_AVISOS = Path("san_martin_avisos_geo.csv")
 GEOJSON_BARRIOS = Path("san_martin_barrios.geojson")
+CSV_HISTORICO = Path("san_martin_historico.csv")
 MAPA_HTML = Path("san_martin_mapa_geo.html")
 
 
@@ -67,6 +68,28 @@ def cargar_barrios():
     return json.loads(GEOJSON_BARRIOS.read_text(encoding="utf-8"))
 
 
+def cargar_historico() -> list[dict]:
+    if not CSV_HISTORICO.exists():
+        return []
+    filas = []
+    with CSV_HISTORICO.open(encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            try:
+                filas.append(
+                    {
+                        "fecha": row["fecha"],
+                        "zona": row["zona"],
+                        "tipo": row["tipo"],
+                        "cantidad": int(row["cantidad"]),
+                        "precio": int(row["precio_mediana"]),
+                        "precio_m2": int(row["precio_m2_mediana"]),
+                    }
+                )
+            except (KeyError, ValueError):
+                continue
+    return filas
+
+
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -75,6 +98,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   html, body { margin: 0; height: 100%; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
   #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
@@ -95,6 +119,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   #leyenda .nota { margin-top: 6px; color: #777; font-size: 11px; max-width: 230px; }
   .aviso-popup b { font-size: 13px; }
   .aviso-popup a { color: #1f6feb; }
+  #evolucion { top: 12px; right: 12px; padding: 12px 14px; width: 280px; }
+  #evolucion h1 { font-size: 14px; margin: 0 0 8px; }
+  #evolucion label { display: block; margin-top: 6px; font-weight: 600; color: #333; font-size: 12px; }
+  #evolucion select { width: 100%; margin-top: 3px; padding: 4px; font-size: 13px; }
+  #evolucion .sin-datos { margin-top: 10px; color: #777; font-size: 12px; }
+  #evChartWrap { margin-top: 10px; height: 150px; }
 </style>
 </head>
 <body>
@@ -141,9 +171,26 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <div class="nota">Cada punto es un aviso, ubicado en la dirección real que informa Zonaprop. El fondo de color por barrio es la mediana de esa zona (sin límite catastral oficial en algunos casos).</div>
 </div>
 
+<div id="evolucion" class="panel">
+  <h1>Evolución por barrio</h1>
+  <label for="evZona">Barrio</label>
+  <select id="evZona"></select>
+  <label for="evMetrica">Métrica</label>
+  <select id="evMetrica">
+    <option value="precio">Alquiler ($), mediana</option>
+    <option value="precio_m2">Precio por m² ($/m²), mediana</option>
+  </select>
+  <div id="evChartWrap"><canvas id="evChart"></canvas></div>
+  <div class="sin-datos" id="evSinDatos" style="display:none">
+    Todavía no hay histórico guardado para este barrio. Se va acumulando un
+    punto por corrida del scraper (ver sanmartin_historico.py).
+  </div>
+</div>
+
 <script>
 const AVISOS = __AVISOS_JSON__;
 const BARRIOS = __BARRIOS_GEOJSON__;
+const HISTORICO = __HISTORICO_JSON__;
 
 const map = L.map('map', { scrollWheelZoom: true, preferCanvas: true }).setView([-34.5657, -58.5495], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -250,6 +297,7 @@ function redibujar() {
       },
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.zona, { sticky: true });
+        layer.on('click', () => seleccionarZonaEvolucion(feature.properties.zona));
       },
     });
     barriosLayer.addTo(map);
@@ -264,18 +312,104 @@ document.getElementById('fAmbientes').addEventListener('change', redibujar);
 document.getElementById('fMetrica').addEventListener('change', redibujar);
 document.getElementById('fBarrios').addEventListener('change', redibujar);
 redibujar();
+
+// --- Panel de evolución histórica por barrio ---
+const ZONA_TODAS = '__todas__';
+const zonasConHistorico = [...new Set(HISTORICO.filter(h => h.tipo === 'Todos').map(h => h.zona))]
+  .filter(z => z !== ZONA_TODAS)
+  .sort((a, b) => a.localeCompare(b, 'es'));
+
+const evZonaSelect = document.getElementById('evZona');
+const optTodas = document.createElement('option');
+optTodas.value = ZONA_TODAS;
+optTodas.textContent = 'Todos los barrios (San Martín)';
+evZonaSelect.appendChild(optTodas);
+for (const z of zonasConHistorico) {
+  const opt = document.createElement('option');
+  opt.value = z;
+  opt.textContent = z;
+  evZonaSelect.appendChild(opt);
+}
+evZonaSelect.value = ZONA_TODAS;
+
+let evChart = null;
+function redibujarEvolucion() {
+  const zona = evZonaSelect.value;
+  const metrica = document.getElementById('evMetrica').value;
+  const serie = HISTORICO
+    .filter(h => h.zona === zona && h.tipo === 'Todos')
+    .sort((a, b) => a.fecha.localeCompare(b.fecha));
+
+  const sinDatos = document.getElementById('evSinDatos');
+  const wrap = document.getElementById('evChartWrap');
+  if (!serie.length) {
+    sinDatos.style.display = 'block';
+    wrap.style.display = 'none';
+    return;
+  }
+  sinDatos.style.display = 'none';
+  wrap.style.display = 'block';
+
+  const labels = serie.map(s => s.fecha);
+  const valores = serie.map(s => s[metrica]);
+  const cantidades = serie.map(s => s.cantidad);
+
+  if (evChart) evChart.destroy();
+  evChart = new Chart(document.getElementById('evChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: metrica === 'precio' ? 'Alquiler ($)' : 'Precio por m² ($/m²)',
+        data: valores,
+        borderColor: '#1f6feb',
+        backgroundColor: 'rgba(31,111,235,0.15)',
+        tension: 0.2,
+        fill: true,
+        pointRadius: 3,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            afterLabel: (ctx) => `${cantidades[ctx.dataIndex]} avisos ese día`,
+          },
+        },
+      },
+      scales: {
+        y: { ticks: { callback: (v) => fmt.format(v) } },
+      },
+    },
+  });
+}
+
+function seleccionarZonaEvolucion(zona) {
+  if (![...evZonaSelect.options].some(o => o.value === zona)) return;
+  evZonaSelect.value = zona;
+  redibujarEvolucion();
+  document.getElementById('evolucion').scrollIntoView({ block: 'nearest' });
+}
+
+evZonaSelect.addEventListener('change', redibujarEvolucion);
+document.getElementById('evMetrica').addEventListener('change', redibujarEvolucion);
+redibujarEvolucion();
 </script>
 </body>
 </html>
 """
 
 
-def armar_mapa(avisos: list[dict], barrios_geojson) -> None:
+def armar_mapa(avisos: list[dict], barrios_geojson, historico: list[dict]) -> None:
     html = HTML_TEMPLATE.replace("__AVISOS_JSON__", json.dumps(avisos, ensure_ascii=False))
     html = html.replace(
         "__BARRIOS_GEOJSON__",
         json.dumps(barrios_geojson, ensure_ascii=False) if barrios_geojson else "null",
     )
+    html = html.replace("__HISTORICO_JSON__", json.dumps(historico, ensure_ascii=False))
     MAPA_HTML.write_text(html, encoding="utf-8")
     print(f"[i] Mapa guardado en {MAPA_HTML} - abrilo con doble clic")
 
@@ -288,7 +422,12 @@ def main() -> None:
         print(f"[i] Usando polígonos de barrio de {GEOJSON_BARRIOS} como fondo")
     else:
         print(f"[i] No encontré {GEOJSON_BARRIOS}; el mapa se arma sin fondo de barrios")
-    armar_mapa(avisos, barrios)
+    historico = cargar_historico()
+    if historico:
+        print(f"[i] {len(historico)} filas de histórico cargadas de {CSV_HISTORICO}")
+    else:
+        print(f"[i] No encontré {CSV_HISTORICO}; el panel de evolución queda vacío por ahora")
+    armar_mapa(avisos, barrios, historico)
 
 
 if __name__ == "__main__":
