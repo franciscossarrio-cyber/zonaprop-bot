@@ -157,6 +157,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </select>
 
   <div class="fila-check">
+    <input type="checkbox" id="fPuntos" checked>
+    <label for="fPuntos" style="margin:0">Mostrar avisos (puntos)</label>
+  </div>
+
+  <div class="fila-check">
     <input type="checkbox" id="fBarrios" checked>
     <label for="fBarrios" style="margin:0">Mostrar barrios (fondo)</label>
   </div>
@@ -304,12 +309,17 @@ function redibujar() {
     barriosLayer.bringToBack();
   }
 
-  puntosLayer.addTo(map);
+  if (document.getElementById('fPuntos').checked) {
+    puntosLayer.addTo(map);
+  } else {
+    puntosLayer.remove();
+  }
 }
 
 document.getElementById('fTipo').addEventListener('change', redibujar);
 document.getElementById('fAmbientes').addEventListener('change', redibujar);
 document.getElementById('fMetrica').addEventListener('change', redibujar);
+document.getElementById('fPuntos').addEventListener('change', redibujar);
 document.getElementById('fBarrios').addEventListener('change', redibujar);
 redibujar();
 
