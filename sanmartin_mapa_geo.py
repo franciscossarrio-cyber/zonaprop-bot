@@ -47,7 +47,8 @@ def cargar_avisos() -> list[dict]:
                 continue
             avisos.append(
                 {
-                    "zona": row["zona"],
+                    "zona": row.get("zona_geo") or row["zona"],
+                    "zona_zonaprop": row["zona"],
                     "tipo": row["tipo"],
                     "ambientes": min(ambientes, 5),
                     "precio": precio,
@@ -125,11 +126,41 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   #evolucion select { width: 100%; margin-top: 3px; padding: 4px; font-size: 13px; }
   #evolucion .sin-datos { margin-top: 10px; color: #777; font-size: 12px; }
   #evChartWrap { margin-top: 10px; height: 150px; }
+
+  #panelToggle {
+    display: none; position: absolute; z-index: 1200; top: 12px; left: 12px;
+    width: 42px; height: 42px; border: none; border-radius: 8px; background: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.35); font-size: 20px; line-height: 1; cursor: pointer;
+  }
+  #scrim {
+    display: none; position: absolute; inset: 0; z-index: 900; background: rgba(0,0,0,0.25);
+  }
+
+  @media (max-width: 680px) {
+    #panelToggle { display: block; }
+    #panelSidebar {
+      position: fixed; top: 0; left: 0; bottom: 0; z-index: 1100;
+      width: min(88vw, 320px); padding: 62px 10px 16px; overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      transform: translateX(-105%); transition: transform 0.2s ease;
+    }
+    body.panels-open #panelSidebar { transform: translateX(0); }
+    body.panels-open #scrim { display: block; }
+    #panelSidebar .panel {
+      position: static !important; width: auto !important; min-width: 0 !important;
+      max-width: none !important; margin-bottom: 10px; padding: 12px !important;
+    }
+    #leyenda .nota { max-width: none; }
+    .leaflet-popup-content-wrapper { max-width: 78vw; }
+  }
 </style>
 </head>
 <body>
 <div id="map"></div>
+<button id="panelToggle" aria-label="Mostrar filtros">☰</button>
+<div id="scrim"></div>
 
+<div id="panelSidebar">
 <div id="controles" class="panel">
   <h1>Alquileres — San Martín</h1>
   <label for="fTipo">Tipo de propiedad</label>
@@ -191,6 +222,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     punto por corrida del scraper (ver sanmartin_historico.py).
   </div>
 </div>
+</div>
 
 <script>
 const AVISOS = __AVISOS_JSON__;
@@ -202,6 +234,14 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
   maxZoom: 19,
 }).addTo(map);
+
+// --- Cajón de filtros en mobile (< 680px) ---
+document.getElementById('panelToggle').addEventListener('click', () => {
+  document.body.classList.toggle('panels-open');
+});
+document.getElementById('scrim').addEventListener('click', () => {
+  document.body.classList.remove('panels-open');
+});
 
 function mediana(arr) {
   if (!arr.length) return null;
@@ -279,11 +319,14 @@ function redibujar() {
       fillOpacity: 0.85,
     });
     const link = a.url ? `<br><a href="${a.url}" target="_blank" rel="noopener">Ver aviso en Zonaprop →</a>` : '';
+    const zonaLinea = a.zona_zonaprop && a.zona_zonaprop !== a.zona
+      ? `Barrio: ${a.zona} <span style="color:#888">(Zonaprop lo publicó como "${a.zona_zonaprop}")</span>`
+      : `Barrio: ${a.zona}`;
     marker.bindPopup(
       `<b>${a.direccion || a.zona}</b><br>` +
       `${a.tipo} · ${a.ambientes}${a.ambientes >= 5 ? '+' : ''} amb · ${a.m2} m²<br>` +
       `$${fmt.format(a.precio)} (\$${fmt.format(a.precio_m2)}/m²)<br>` +
-      `Barrio: ${a.zona}${link}`,
+      `${zonaLinea}${link}`,
       { maxWidth: 260 }
     );
     marker.bindTooltip(`$${fmt.format(a[metrica])}${metrica === 'precio_m2' ? '/m²' : ''}`);
@@ -325,6 +368,7 @@ redibujar();
 
 // --- Panel de evolución histórica por barrio ---
 const ZONA_TODAS = '__todas__';
+const TEXTO_SIN_DATOS_DEFAULT = 'Todavía no hay histórico guardado para este barrio. Se va acumulando un punto por corrida del scraper (ver sanmartin_historico.py).';
 const zonasConHistorico = [...new Set(HISTORICO.filter(h => h.tipo === 'Todos').map(h => h.zona))]
   .filter(z => z !== ZONA_TODAS)
   .sort((a, b) => a.localeCompare(b, 'es'));
@@ -353,6 +397,7 @@ function redibujarEvolucion() {
   const sinDatos = document.getElementById('evSinDatos');
   const wrap = document.getElementById('evChartWrap');
   if (!serie.length) {
+    sinDatos.textContent = TEXTO_SIN_DATOS_DEFAULT;
     sinDatos.style.display = 'block';
     wrap.style.display = 'none';
     return;
@@ -398,9 +443,17 @@ function redibujarEvolucion() {
 }
 
 function seleccionarZonaEvolucion(zona) {
-  if (![...evZonaSelect.options].some(o => o.value === zona)) return;
-  evZonaSelect.value = zona;
-  redibujarEvolucion();
+  const tieneOpcion = [...evZonaSelect.options].some(o => o.value === zona);
+  if (tieneOpcion) {
+    evZonaSelect.value = zona;
+    redibujarEvolucion();
+  } else {
+    document.getElementById('evChartWrap').style.display = 'none';
+    const sinDatos = document.getElementById('evSinDatos');
+    sinDatos.textContent = `Todavía no hay avisos registrados en "${zona}" para armar un histórico.`;
+    sinDatos.style.display = 'block';
+  }
+  if (window.innerWidth <= 680) document.body.classList.add('panels-open');
   document.getElementById('evolucion').scrollIntoView({ block: 'nearest' });
 }
 

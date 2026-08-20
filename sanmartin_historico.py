@@ -49,7 +49,8 @@ def cargar_avisos() -> list[dict]:
                 precio_m2 = int(row["precio_m2"])
             except (KeyError, ValueError):
                 continue
-            avisos.append({"zona": row["zona"], "tipo": row["tipo"], "precio": precio, "precio_m2": precio_m2})
+            zona = row.get("zona_geo") or row["zona"]
+            avisos.append({"zona": zona, "tipo": row["tipo"], "precio": precio, "precio_m2": precio_m2})
     return avisos
 
 

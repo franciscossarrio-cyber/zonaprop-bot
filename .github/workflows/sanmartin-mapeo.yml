@@ -22,10 +22,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install requests
+      - run: pip install requests shapely
 
       - name: Scrapear avisos de San Martín
         run: python sanmartin_scrape_geo.py
+
+      - name: Ubicar cada aviso en su barrio real (por coordenadas)
+        run: python sanmartin_geomatch.py
 
       - name: Agregar punto al histórico por barrio
         run: python sanmartin_historico.py
