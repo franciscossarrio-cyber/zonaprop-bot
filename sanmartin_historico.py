@@ -26,7 +26,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from statistics import median
 
-CSV_AVISOS = Path("san_martin_avisos_geo.csv")
+CSV_AVISOS = Path("san_martin_avisos_combinado.csv")
 CSV_HISTORICO = Path("san_martin_historico.csv")
 
 FIELDNAMES = [
@@ -40,7 +40,7 @@ TIPO_TODOS = "Todos"
 
 def cargar_avisos() -> list[dict]:
     if not CSV_AVISOS.exists():
-        raise SystemExit(f"No encontré {CSV_AVISOS}. Corré primero sanmartin_scrape_geo.py.")
+        raise SystemExit(f"No encontré {CSV_AVISOS}. Corré primero sanmartin_merge_fuentes.py.")
     avisos = []
     with CSV_AVISOS.open(encoding="utf-8") as f:
         for row in csv.DictReader(f):

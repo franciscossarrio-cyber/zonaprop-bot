@@ -15,6 +15,7 @@ concurrency:
 jobs:
   scrape-y-mapa:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -22,10 +23,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install requests shapely
+      - run: pip install requests shapely playwright
 
-      - name: Scrapear avisos de San Martín
+      - name: Instalar Chromium para Playwright (scraper de Argenprop)
+        run: playwright install --with-deps chromium
+
+      - name: Scrapear avisos de San Martín (Zonaprop)
         run: python sanmartin_scrape_geo.py
+
+      - name: Scrapear avisos de San Martín (Argenprop)
+        run: python sanmartin_scrape_argenprop.py
+        continue-on-error: true
+
+      - name: Geocodificar direcciones de Argenprop
+        run: python sanmartin_geocode_argenprop.py
+        continue-on-error: true
+
+      - name: Combinar avisos de ambas fuentes
+        run: python sanmartin_merge_fuentes.py
 
       - name: Ubicar cada aviso en su barrio real (por coordenadas)
         run: python sanmartin_geomatch.py
@@ -40,6 +55,7 @@ jobs:
         run: |
           git config user.name "sanmartin-mapeo-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add san_martin_avisos_geo.csv san_martin_historico.csv san_martin_mapa_geo.html
+          git add san_martin_avisos_geo.csv san_martin_avisos_argenprop.csv san_martin_avisos_combinado.csv \
+                  argenprop_geocode_cache.json san_martin_historico.csv san_martin_mapa_geo.html
           git diff --staged --quiet || git commit -m "mapeo: actualización $(date -u +%F\ %H:%M)"
           git push

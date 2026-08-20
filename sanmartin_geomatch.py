@@ -32,7 +32,7 @@ from pathlib import Path
 from shapely.geometry import Point, shape
 from shapely.prepared import prep
 
-CSV_AVISOS = Path("san_martin_avisos_geo.csv")
+CSV_AVISOS = Path("san_martin_avisos_combinado.csv")
 GEOJSON_BARRIOS = Path("san_martin_barrios.geojson")
 
 
@@ -59,7 +59,7 @@ def matchear(lat: float, lon: float, oficiales, legacy) -> str | None:
 
 def main() -> None:
     if not CSV_AVISOS.exists():
-        raise SystemExit(f"No encontré {CSV_AVISOS}. Corré primero sanmartin_scrape_geo.py.")
+        raise SystemExit(f"No encontré {CSV_AVISOS}. Corré primero sanmartin_merge_fuentes.py.")
     if not GEOJSON_BARRIOS.exists():
         raise SystemExit(f"No encontré {GEOJSON_BARRIOS}.")
 

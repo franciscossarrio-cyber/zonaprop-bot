@@ -12,6 +12,9 @@ argenprop_cookies.json
 # Dumps de debug (se regeneran con --dump)
 dump_*.html
 
+# Intermedio del pipeline de San Martín (se regenera cada corrida)
+san_martin_avisos_argenprop_raw.csv
+
 # Scripts locales con tokens de Telegram en texto plano — NO subir
 run_zonaprop_bot.bat
 run_argenprop_bot.bat

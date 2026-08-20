@@ -3,14 +3,11 @@
 Importa los polígonos oficiales de barrio/villa de San Martín desde el
 shapefile de localidades (fuente: UNGS, capa "localidades san martin_UNGS")
 y el límite del partido (capa "limite partido San Martin_3857"), y arma
-san_martin_barrios.geojson combinando:
-
-  - Los 24 polígonos oficiales de villa dentro de la ciudad cabecera
-    (filtrados por código de localidad clc que empieza con "0637101",
-    el código INDEC del partido de San Martín).
-  - Las zonas que Zonaprop usa pero que esta capa no cubre (José León
-    Suárez, Loma Hermosa, Villa Bonich, General San Martín), tomadas del
-    geojson anterior (aproximado a mano / OSM) para no perder cobertura.
+san_martin_barrios.geojson con los 24 polígonos oficiales de villa dentro
+de la ciudad cabecera (filtrados por código de localidad clc que empieza
+con "0637101", el código INDEC del partido de San Martín). No se mezclan
+polígonos aproximados de otras fuentes (OSM, a mano, etc.) — solo lo que
+sale de este shapefile oficial.
 
 También guarda san_martin_partido.geojson con el límite del partido
 (reproyectado de EPSG:3857 a WGS84) como capa de referencia.
@@ -65,16 +62,6 @@ OFICIAL_A_ZONA = {
     "CIUDAD JARDIN EL LIBERTADOR": "Ciudad Jardín El Libertador",
 }
 
-# Zonas que Zonaprop usa y que la capa de localidades UNGS no cubre (quedan
-# fuera de la grilla de villas de la ciudad cabecera). Se conservan del
-# geojson anterior para no perder esa cobertura en el mapa.
-ZONAS_LEGACY_A_CONSERVAR = {
-    "José León Suárez",
-    "Loma Hermosa",
-    "Villa Bonich",
-    "General San Martín",
-}
-
 
 def fix_mojibake(s: str) -> str:
     """El .dbf trae varios nombres UTF-8 codificados dos veces. Si el string
@@ -117,21 +104,6 @@ def cargar_villas_oficiales(carpeta: Path) -> list[dict]:
     return features
 
 
-def cargar_legacy(zonas: set[str]) -> list[dict]:
-    if not BARRIOS_GEOJSON.exists():
-        return []
-    data = json.loads(BARRIOS_GEOJSON.read_text(encoding="utf-8"))
-    out = []
-    for f in data.get("features", []):
-        zona = f.get("properties", {}).get("zona")
-        if zona in zonas:
-            f["properties"]["aprox"] = True
-            f["properties"]["oficial"] = False
-            out.append(f)
-    print(f"[i] {len(out)} zonas legacy conservadas: {[f['properties']['zona'] for f in out]}")
-    return out
-
-
 def cargar_partido(carpeta: Path) -> dict:
     sf = shapefile.Reader(str(carpeta / "limite partido San Martin_3857"), encoding="utf-8")
     transformer = Transformer.from_crs("EPSG:3857", "EPSG:4326", always_xy=True)
@@ -168,9 +140,7 @@ def main() -> None:
     args = ap.parse_args()
     carpeta = Path(args.src)
 
-    villas = cargar_villas_oficiales(carpeta)
-    legacy = cargar_legacy(ZONAS_LEGACY_A_CONSERVAR)
-    features = villas + legacy
+    features = cargar_villas_oficiales(carpeta)
 
     barrios_fc = {"type": "FeatureCollection", "features": features}
     BARRIOS_GEOJSON.write_text(json.dumps(barrios_fc, ensure_ascii=False, indent=None), encoding="utf-8")

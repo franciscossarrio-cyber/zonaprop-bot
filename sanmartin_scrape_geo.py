@@ -141,6 +141,7 @@ def extraer_avisos(data: dict, tipo: str) -> list[dict]:
                 "lat": lat,
                 "lon": lon,
                 "url": (BASE + p["url"]) if p.get("url") else "",
+                "fuente": "Zonaprop",
             }
         )
     return out
@@ -190,7 +191,7 @@ def main() -> None:
 
     fieldnames = [
         "posting_id", "tipo", "precio", "m2", "precio_m2", "ambientes",
-        "dormitorios", "zona", "direccion", "visibilidad", "lat", "lon", "url",
+        "dormitorios", "zona", "direccion", "visibilidad", "lat", "lon", "url", "fuente",
     ]
     with CSV_OUT.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)

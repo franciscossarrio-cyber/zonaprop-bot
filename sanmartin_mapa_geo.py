@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """
-Mapa de alquileres en San Martín con la ubicación real de cada aviso
-(lat/lon que trae Zonaprop) + los polígonos de barrio como capa de fondo,
-y filtros de Tipo / Ambientes / Métrica que recalculan todo en el navegador.
+Mapa de alquileres en San Martín con la ubicación de cada aviso (pin exacto
+para Zonaprop, dirección geocodificada para Argenprop) + los polígonos de
+barrio como capa de fondo + evolución histórica de precios por barrio, con
+filtros de Tipo / Ambientes / Fuente / Métrica que recalculan todo en el
+navegador.
 
 Uso:
     python sanmartin_mapa_geo.py
 
 Requiere:
-    san_martin_avisos_geo.csv   -> generado por sanmartin_scrape_geo.py
-    san_martin_barrios.geojson  -> opcional, generado por sanmartin_mapa_barrios.py
-                                    (si no está, el mapa se arma igual, sin
-                                    los polígonos de fondo)
+    san_martin_avisos_combinado.csv -> generado por sanmartin_merge_fuentes.py
+                                        (combina Zonaprop + Argenprop) y
+                                        enriquecido por sanmartin_geomatch.py
+    san_martin_barrios.geojson      -> opcional (si no está, el mapa se arma
+                                        igual, sin los polígonos de fondo)
+    san_martin_historico.csv        -> opcional, generado por
+                                        sanmartin_historico.py
 
 Salida:
     san_martin_mapa_geo.html    -> abrilo con doble clic
@@ -21,7 +26,7 @@ import csv
 import json
 from pathlib import Path
 
-CSV_AVISOS = Path("san_martin_avisos_geo.csv")
+CSV_AVISOS = Path("san_martin_avisos_combinado.csv")
 GEOJSON_BARRIOS = Path("san_martin_barrios.geojson")
 CSV_HISTORICO = Path("san_martin_historico.csv")
 MAPA_HTML = Path("san_martin_mapa_geo.html")
@@ -30,7 +35,7 @@ MAPA_HTML = Path("san_martin_mapa_geo.html")
 def cargar_avisos() -> list[dict]:
     if not CSV_AVISOS.exists():
         raise SystemExit(
-            f"No encontré {CSV_AVISOS}. Corré primero sanmartin_scrape_geo.py."
+            f"No encontré {CSV_AVISOS}. Corré primero sanmartin_merge_fuentes.py."
         )
     avisos = []
     with CSV_AVISOS.open(encoding="utf-8") as f:
@@ -56,6 +61,8 @@ def cargar_avisos() -> list[dict]:
                     "precio_m2": precio_m2,
                     "direccion": row.get("direccion", ""),
                     "url": row.get("url", ""),
+                    "fuente": row.get("fuente") or "Zonaprop",
+                    "aprox": row.get("visibilidad") == "APPROX",
                     "lat": lat,
                     "lon": lon,
                 }
@@ -181,6 +188,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <option value="5">5 o más</option>
   </select>
 
+  <label for="fFuente">Fuente</label>
+  <select id="fFuente">
+    <option value="Todos">Todas (Zonaprop + Argenprop)</option>
+    <option value="Zonaprop">Solo Zonaprop</option>
+    <option value="Argenprop">Solo Argenprop</option>
+  </select>
+
   <label for="fMetrica">Color según</label>
   <select id="fMetrica">
     <option value="precio">Alquiler ($)</option>
@@ -204,7 +218,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <div class="titulo" id="leyendaTitulo">Alquiler ($)</div>
   <div class="barra"></div>
   <div class="rango"><span id="leyendaMin">-</span><span id="leyendaMax">-</span></div>
-  <div class="nota">Cada punto es un aviso, ubicado en la dirección real que informa Zonaprop. El fondo de color por barrio es la mediana de esa zona (sin límite catastral oficial en algunos casos).</div>
+  <div class="nota">Los avisos de Zonaprop usan el pin exacto que informa el sitio. Los de Argenprop (borde punteado) están ubicados por dirección aproximada, geocodificada, ya que ese sitio no publica el pin exacto en el listado.</div>
 </div>
 
 <div id="evolucion" class="panel">
@@ -271,9 +285,11 @@ let barriosLayer = null;
 function filtrarAvisos() {
   const tipo = document.getElementById('fTipo').value;
   const amb = document.getElementById('fAmbientes').value;
+  const fuente = document.getElementById('fFuente').value;
   return AVISOS.filter(a =>
     (tipo === 'Todos' || a.tipo === tipo) &&
-    (amb === 'Todos' || String(a.ambientes) === amb)
+    (amb === 'Todos' || String(a.ambientes) === amb) &&
+    (fuente === 'Todos' || a.fuente === fuente)
   );
 }
 
@@ -317,16 +333,20 @@ function redibujar() {
       color: '#333',
       fillColor: colorEscala(t),
       fillOpacity: 0.85,
+      dashArray: a.aprox ? '3 2' : null,
     });
-    const link = a.url ? `<br><a href="${a.url}" target="_blank" rel="noopener">Ver aviso en Zonaprop →</a>` : '';
+    const link = a.url ? `<br><a href="${a.url}" target="_blank" rel="noopener">Ver aviso en ${a.fuente} →</a>` : '';
     const zonaLinea = a.zona_zonaprop && a.zona_zonaprop !== a.zona
-      ? `Barrio: ${a.zona} <span style="color:#888">(Zonaprop lo publicó como "${a.zona_zonaprop}")</span>`
+      ? `Barrio: ${a.zona} <span style="color:#888">(${a.fuente} lo publicó como "${a.zona_zonaprop}")</span>`
       : `Barrio: ${a.zona}`;
+    const ubicacionNota = a.aprox
+      ? `<br><span style="color:#888;font-size:11px">Ubicación aproximada (dirección geocodificada, no es el pin exacto)</span>`
+      : '';
     marker.bindPopup(
-      `<b>${a.direccion || a.zona}</b><br>` +
+      `<b>${a.direccion || a.zona}</b> <span style="color:#888;font-weight:400">· ${a.fuente}</span><br>` +
       `${a.tipo} · ${a.ambientes}${a.ambientes >= 5 ? '+' : ''} amb · ${a.m2} m²<br>` +
       `$${fmt.format(a.precio)} (\$${fmt.format(a.precio_m2)}/m²)<br>` +
-      `${zonaLinea}${link}`,
+      `${zonaLinea}${link}${ubicacionNota}`,
       { maxWidth: 260 }
     );
     marker.bindTooltip(`$${fmt.format(a[metrica])}${metrica === 'precio_m2' ? '/m²' : ''}`);
@@ -361,6 +381,7 @@ function redibujar() {
 
 document.getElementById('fTipo').addEventListener('change', redibujar);
 document.getElementById('fAmbientes').addEventListener('change', redibujar);
+document.getElementById('fFuente').addEventListener('change', redibujar);
 document.getElementById('fMetrica').addEventListener('change', redibujar);
 document.getElementById('fPuntos').addEventListener('change', redibujar);
 document.getElementById('fBarrios').addEventListener('change', redibujar);
