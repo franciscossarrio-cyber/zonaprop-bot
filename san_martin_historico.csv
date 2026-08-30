@@ -1013,3 +1013,98 @@ fecha,zona,tipo,cantidad,precio_mediana,precio_m2_mediana
 2026-08-29,__todas__,Departamento,300,600000,12756
 2026-08-29,__todas__,PH,161,650000,11667
 2026-08-29,__todas__,Todos,529,650000,12222
+2026-08-30,Barrio Parque General San Martin,PH,1,800000,4000
+2026-08-30,Barrio Parque General San Martin,Todos,1,800000,4000
+2026-08-30,Billinghurst,Casa,2,3250000,10906
+2026-08-30,Billinghurst,Departamento,9,390000,11667
+2026-08-30,Billinghurst,PH,5,450000,12833
+2026-08-30,Billinghurst,Todos,16,460000,11706
+2026-08-30,Ciudad Jardín El Libertador,Casa,7,800000,8333
+2026-08-30,Ciudad Jardín El Libertador,Departamento,11,500000,12222
+2026-08-30,Ciudad Jardín El Libertador,PH,14,600000,11458
+2026-08-30,Ciudad Jardín El Libertador,Todos,32,675000,10968
+2026-08-30,General San Martín,Casa,1,500000,8333
+2026-08-30,General San Martín,Departamento,1,400000,12121
+2026-08-30,General San Martín,PH,1,450000,10000
+2026-08-30,General San Martín,Todos,3,450000,10000
+2026-08-30,Jose Leon Suarez,PH,1,350000,11667
+2026-08-30,Jose Leon Suarez,Todos,1,350000,11667
+2026-08-30,José León Suárez,Departamento,1,650000,10833
+2026-08-30,José León Suárez,Todos,1,650000,10833
+2026-08-30,San Andrés,Casa,9,1450000,12000
+2026-08-30,San Andrés,Departamento,16,600000,12746
+2026-08-30,San Andrés,PH,8,655000,11166
+2026-08-30,San Andrés,Todos,33,700000,12444
+2026-08-30,San Martín Centro,Casa,5,1200000,9211
+2026-08-30,San Martín Centro,Departamento,87,600000,13043
+2026-08-30,San Martín Centro,PH,16,895000,12111
+2026-08-30,San Martín Centro,Todos,108,650000,12842
+2026-08-30,Villa Ayacucho,Departamento,1,580000,11373
+2026-08-30,Villa Ayacucho,Todos,1,580000,11373
+2026-08-30,Villa Ballester,Casa,14,1399500,8454
+2026-08-30,Villa Ballester,Departamento,79,650000,12500
+2026-08-30,Villa Ballester,PH,18,725000,12385
+2026-08-30,Villa Ballester,Todos,111,690000,12500
+2026-08-30,Villa Chacabuco,Casa,1,1300000,4333
+2026-08-30,Villa Chacabuco,PH,1,750000,8824
+2026-08-30,Villa Chacabuco,Todos,2,1025000,6578
+2026-08-30,Villa Godoy Cruz,Casa,2,1050000,9392
+2026-08-30,Villa Godoy Cruz,Departamento,13,550000,13030
+2026-08-30,Villa Godoy Cruz,PH,6,545000,11580
+2026-08-30,Villa Godoy Cruz,Todos,21,570000,12250
+2026-08-30,Villa Granaderos De San Martin,Casa,1,600000,10909
+2026-08-30,Villa Granaderos De San Martin,Departamento,1,600000,13333
+2026-08-30,Villa Granaderos De San Martin,PH,1,700000,11667
+2026-08-30,Villa Granaderos De San Martin,Todos,3,600000,11667
+2026-08-30,Villa Gregoria Matorras,Casa,4,1100000,11826
+2026-08-30,Villa Gregoria Matorras,Departamento,7,580000,11636
+2026-08-30,Villa Gregoria Matorras,PH,19,700000,12143
+2026-08-30,Villa Gregoria Matorras,Todos,30,700000,11889
+2026-08-30,Villa Guido,Casa,2,1125000,7446
+2026-08-30,Villa Guido,Departamento,18,640000,12728
+2026-08-30,Villa Guido,PH,18,525000,10500
+2026-08-30,Villa Guido,Todos,38,600000,11804
+2026-08-30,Villa Las Heras,Casa,1,1250000,6250
+2026-08-30,Villa Las Heras,Departamento,4,660000,12683
+2026-08-30,Villa Las Heras,PH,7,700000,12292
+2026-08-30,Villa Las Heras,Todos,12,695000,12550
+2026-08-30,Villa Libertad,Casa,4,850000,6888
+2026-08-30,Villa Libertad,Departamento,6,625000,10871
+2026-08-30,Villa Libertad,PH,4,420000,10389
+2026-08-30,Villa Libertad,Todos,14,625000,10556
+2026-08-30,Villa Lynch,PH,1,550000,11000
+2026-08-30,Villa Lynch,Todos,1,550000,11000
+2026-08-30,Villa Maipu,Casa,5,900000,11111
+2026-08-30,Villa Maipu,Departamento,13,550000,11765
+2026-08-30,Villa Maipu,PH,13,750000,10652
+2026-08-30,Villa Maipu,Todos,31,750000,11429
+2026-08-30,Villa Marqués de Aguado,Casa,1,750000,6198
+2026-08-30,Villa Marqués de Aguado,Departamento,2,485000,13622
+2026-08-30,Villa Marqués de Aguado,PH,2,650000,10956
+2026-08-30,Villa Marqués de Aguado,Todos,5,650000,12500
+2026-08-30,Villa Monteagudo,Departamento,3,900000,11250
+2026-08-30,Villa Monteagudo,PH,9,850000,12500
+2026-08-30,Villa Monteagudo,Todos,12,850000,12322
+2026-08-30,Villa Parque Figueroa Alcorta,PH,1,650000,7558
+2026-08-30,Villa Parque Figueroa Alcorta,Todos,1,650000,7558
+2026-08-30,Villa Parque San Lorenzo,Casa,1,1900000,8444
+2026-08-30,Villa Parque San Lorenzo,PH,2,800000,11318
+2026-08-30,Villa Parque San Lorenzo,Todos,3,800000,9302
+2026-08-30,Villa Pueyrredón,Casa,2,1125000,6222
+2026-08-30,Villa Pueyrredón,Departamento,8,425000,10218
+2026-08-30,Villa Pueyrredón,PH,9,470000,11250
+2026-08-30,Villa Pueyrredón,Todos,19,470000,10435
+2026-08-30,Villa Sucre,Casa,5,990000,10714
+2026-08-30,Villa Sucre,Departamento,4,440000,13030
+2026-08-30,Villa Sucre,Todos,9,600000,12375
+2026-08-30,Villa Yapeyú,Departamento,2,600000,13790
+2026-08-30,Villa Yapeyú,PH,2,570000,13347
+2026-08-30,Villa Yapeyú,Todos,4,600000,13790
+2026-08-30,Villa Zapiola,Casa,2,1095000,5219
+2026-08-30,Villa Zapiola,Departamento,3,450000,10526
+2026-08-30,Villa Zapiola,PH,4,450000,9666
+2026-08-30,Villa Zapiola,Todos,9,450000,10000
+2026-08-30,__todas__,Casa,69,1100000,8791
+2026-08-30,__todas__,Departamento,289,600000,12600
+2026-08-30,__todas__,PH,163,650000,11667
+2026-08-30,__todas__,Todos,521,650000,12121
