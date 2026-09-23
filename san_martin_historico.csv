@@ -3218,3 +3218,89 @@ fecha,zona,tipo,cantidad,precio_mediana,precio_m2_mediana
 2026-09-22,__todas__,Departamento,301,600000,12600
 2026-09-22,__todas__,PH,147,650000,11765
 2026-09-22,__todas__,Todos,501,650000,12222
+2026-09-23,Billinghurst,Casa,3,3000000,10067
+2026-09-23,Billinghurst,Departamento,6,385000,11667
+2026-09-23,Billinghurst,PH,8,460000,11972
+2026-09-23,Billinghurst,Todos,17,470000,11667
+2026-09-23,Ciudad Jardín El Libertador,Casa,6,800000,8562
+2026-09-23,Ciudad Jardín El Libertador,Departamento,19,500000,11000
+2026-09-23,Ciudad Jardín El Libertador,PH,17,580000,11125
+2026-09-23,Ciudad Jardín El Libertador,Todos,42,565000,10822
+2026-09-23,Jose Leon Suarez,PH,1,350000,11667
+2026-09-23,Jose Leon Suarez,Todos,1,350000,11667
+2026-09-23,José León Suárez,Departamento,1,650000,10833
+2026-09-23,José León Suárez,Todos,1,650000,10833
+2026-09-23,San Andrés,Casa,7,2500000,7391
+2026-09-23,San Andrés,Departamento,12,675000,13500
+2026-09-23,San Andrés,PH,5,620000,12000
+2026-09-23,San Andrés,Todos,24,725000,12614
+2026-09-23,San Martín Centro,Casa,4,2095000,8563
+2026-09-23,San Martín Centro,Departamento,77,650000,12981
+2026-09-23,San Martín Centro,PH,17,900000,12000
+2026-09-23,San Martín Centro,Todos,98,660000,12677
+2026-09-23,Villa Ayacucho,Departamento,1,580000,11373
+2026-09-23,Villa Ayacucho,Todos,1,580000,11373
+2026-09-23,Villa Ballester,Casa,10,1600000,8211
+2026-09-23,Villa Ballester,Departamento,82,650000,13000
+2026-09-23,Villa Ballester,PH,20,700000,11986
+2026-09-23,Villa Ballester,Todos,112,680000,12606
+2026-09-23,Villa Chacabuco,Casa,1,1300000,4333
+2026-09-23,Villa Chacabuco,Todos,1,1300000,4333
+2026-09-23,Villa Godoy Cruz,Casa,1,900000,9184
+2026-09-23,Villa Godoy Cruz,Departamento,14,550000,12848
+2026-09-23,Villa Godoy Cruz,PH,7,500000,12250
+2026-09-23,Villa Godoy Cruz,Todos,22,550000,12375
+2026-09-23,Villa Granaderos De San Martin,Casa,1,600000,10909
+2026-09-23,Villa Granaderos De San Martin,PH,2,725000,10298
+2026-09-23,Villa Granaderos De San Martin,Todos,3,700000,10909
+2026-09-23,Villa Gregoria Matorras,Casa,5,980000,12222
+2026-09-23,Villa Gregoria Matorras,Departamento,12,570000,11938
+2026-09-23,Villa Gregoria Matorras,PH,18,720000,11905
+2026-09-23,Villa Gregoria Matorras,Todos,35,700000,11972
+2026-09-23,Villa Guido,Casa,2,1290000,7908
+2026-09-23,Villa Guido,Departamento,16,630000,12880
+2026-09-23,Villa Guido,PH,17,600000,11765
+2026-09-23,Villa Guido,Todos,35,600000,12000
+2026-09-23,Villa Las Heras,Casa,2,2375000,9606
+2026-09-23,Villa Las Heras,Departamento,5,630000,12766
+2026-09-23,Villa Las Heras,PH,5,590000,12292
+2026-09-23,Villa Las Heras,Todos,12,640000,12664
+2026-09-23,Villa Libertad,Casa,4,850000,6229
+2026-09-23,Villa Libertad,Departamento,6,595000,10774
+2026-09-23,Villa Libertad,PH,6,430000,10389
+2026-09-23,Villa Libertad,Todos,16,525000,10389
+2026-09-23,Villa Lynch,PH,3,720000,14400
+2026-09-23,Villa Lynch,Todos,3,720000,14400
+2026-09-23,Villa Maipu,Casa,2,1200000,9900
+2026-09-23,Villa Maipu,Departamento,10,580000,12806
+2026-09-23,Villa Maipu,PH,9,670000,11111
+2026-09-23,Villa Maipu,Todos,21,670000,11552
+2026-09-23,Villa Marqués de Aguado,Casa,1,750000,6198
+2026-09-23,Villa Marqués de Aguado,Departamento,2,310000,12400
+2026-09-23,Villa Marqués de Aguado,PH,3,550000,9412
+2026-09-23,Villa Marqués de Aguado,Todos,6,525000,10706
+2026-09-23,Villa Monteagudo,Departamento,7,700000,11250
+2026-09-23,Villa Monteagudo,PH,8,825000,12072
+2026-09-23,Villa Monteagudo,Todos,15,730000,12000
+2026-09-23,Villa Parque San Lorenzo,Departamento,2,500000,11966
+2026-09-23,Villa Parque San Lorenzo,PH,4,800000,11607
+2026-09-23,Villa Parque San Lorenzo,Todos,6,775000,11806
+2026-09-23,Villa Pueyrredón,Casa,1,900000,6818
+2026-09-23,Villa Pueyrredón,Departamento,8,465000,10634
+2026-09-23,Villa Pueyrredón,PH,8,550000,10882
+2026-09-23,Villa Pueyrredón,Todos,17,500000,10444
+2026-09-23,Villa Sucre,Casa,4,870000,11544
+2026-09-23,Villa Sucre,Departamento,6,525000,13132
+2026-09-23,Villa Sucre,PH,3,899000,11526
+2026-09-23,Villa Sucre,Todos,13,750000,13030
+2026-09-23,Villa Yapeyú,Departamento,4,600000,11786
+2026-09-23,Villa Yapeyú,PH,1,650000,14444
+2026-09-23,Villa Yapeyú,Todos,5,650000,13750
+2026-09-23,Villa Zapiola,Casa,1,1200000,4938
+2026-09-23,Villa Zapiola,Departamento,3,450000,10526
+2026-09-23,Villa Zapiola,PH,5,450000,10000
+2026-09-23,Villa Zapiola,Todos,9,450000,10000
+2026-09-23,__todas__,Casa,55,1100000,8791
+2026-09-23,__todas__,Departamento,293,630000,12667
+2026-09-23,__todas__,PH,167,620000,11667
+2026-09-23,__todas__,Todos,515,650000,12222
